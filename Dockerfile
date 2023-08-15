@@ -1,6 +1,6 @@
 FROM telethonArab/IqArab:slim-buster
 
-RUN git clone https://github.com/telethonArab/iqthon.git /root/IqArab
+RUN git clone https://github.com/Karimgamal12/iqthon.git /root/IqArab
 
 WORKDIR /root/IqArab
 
