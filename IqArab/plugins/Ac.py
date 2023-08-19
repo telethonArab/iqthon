@@ -1090,13 +1090,13 @@ async def iqvois(vois):
 async def _(event):
     if iqklanr1[0] == "yes":
         await event.edit("**سيتم تجميع المليار , قبل كل شي تأكد من انك قمت بلانظمام الى القنوات الاشتراك الاجباري للبوت لعدم حدوث اخطاء**")
-        channel_entity = await iqthon.get_entity("@zmmbot")
-        await iqthon.send_message("@zmmbot", '/start')
+        channel_entity = await iqthon.get_entity("@EEObot")
+        await iqthon.send_message("@EEObot", '/start')
         await asyncio.sleep(5)
-        msg0 = await iqthon.get_messages("@zmmbot", limit=1)
+        msg0 = await iqthon.get_messages("@EEObot", limit=1)
         await msg0[0].click(2)
         await asyncio.sleep(5)
-        msg1 = await iqthon.get_messages("@zmmbot", limit=1)
+        msg1 = await iqthon.get_messages("@EEObot", limit=1)
         await msg1[0].click(0)
 
         chs = 1
@@ -1118,7 +1118,7 @@ async def _(event):
                 except:
                     bott = url.split('/')[-1]
                     await iqthon(ImportChatInviteRequest(bott))
-                msg2 = await iqthon.get_messages("@zmmbot", limit=1)
+                msg2 = await iqthon.get_messages("@EEObot", limit=1)
                 await msg2[0].click(text='تحقق')
                 chs += 1
                 await iqthon.send_message("me", f"تم الاشتراك في {chs} قناة")
