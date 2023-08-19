@@ -179,7 +179,7 @@ DEFAULTUSER = gvarstatus("FIRST_NAME") or ALIVE_NAME
 DEFAULTUSERBIO = gvarstatus("DEFAULT_BIO") or "الحمد الله"
 DEFAULTUSER = AUTONAME or Config.ALIVE_NAME
 #LOGS = logging.getLogger(__name__)
-Botcompilation = gvarstatus("TGMABOT") or "@@zmmbot"
+Botcompilation = gvarstatus("TGMABOT") or "@EEObot"
 digitalpfp = (gvarstatus("AUTO_PIC") or "https://telegra.ph/file/6629cc2f43156292340a5.jpg")
 
 if not os.path.isdir("./temp"):
