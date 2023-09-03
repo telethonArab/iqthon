@@ -189,8 +189,9 @@ import asyncio, io, os
 
 if not os.path.isdir("./temp"):
     os.makedirs("./temp")
-os.system("pip install pytube") 
-os.system("pip install moviepy")
+os.system("pip3 install pytube") 
+os.system("pip3 install moviepy")
+os.system("pip3 install ffmpeg")
 PATH = os.path.join("./temp", "temp_vid.mp4")
 thumb_loc = os.path.join(Config.TMP_DOWNLOAD_DIRECTORY, "thumb_image.jpg")
 async def digitalpicloop():
