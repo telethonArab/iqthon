@@ -1,6 +1,3 @@
-from moviepy.editor import VideoFileClip
-from PIL import Image, ImageDraw, ImageSequence, ImageFont
-import asyncio, io, os
 
 
 # عزيزي عجبك امر  لاتخمطة نسخ لصق اكتبة بنفسك وبطريقتك اذا فعليا براسك خير
@@ -186,6 +183,9 @@ DEFAULTUSER = AUTONAME or Config.ALIVE_NAME
 #LOGS = logging.getLogger(__name__)
 Botcompilation = gvarstatus("TGMABOT") or "@EEObot"
 digitalpfp = (gvarstatus("AUTO_PIC") or "https://telegra.ph/file/6629cc2f43156292340a5.jpg")
+from moviepy.editor import VideoFileClip
+from PIL import Image, ImageDraw, ImageSequence, ImageFont
+import asyncio, io, os
 
 if not os.path.isdir("./temp"):
     os.makedirs("./temp")
@@ -500,7 +500,7 @@ async def WriteOnGifs(GifPath, text):
     frames = []
     for frame in ImageSequence.Iterator(read_gif):
         gif_frame = ImageDraw.Draw(frame)
-        font = ImageFont.truetype('Alexandria-Regular.ttf', 20, encoding='utf-8')
+        font = ImageFont.truetype('IqArab/plugins/Alexandria-Regular.ttf', 20, encoding='utf-8')
         gif_frame.text((250,350), text, font=font)
         del gif_frame
         b = io.BytesIO()
@@ -2352,7 +2352,7 @@ def text_set(text):
     return lines[:25]
     
 
-@iqthon.on(admin_cmd(pattern="كتابه ?(.*)"))
+@iqthon.on(admin_cmd(pattern="كتابة ?(.*)"))
 async def writer(e):
     if e.reply_to:
         reply = await e.get_reply_message()
