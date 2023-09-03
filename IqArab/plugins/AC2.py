@@ -500,7 +500,7 @@ async def WriteOnGifs(GifPath, text):
     frames = []
     for frame in ImageSequence.Iterator(read_gif):
         gif_frame = ImageDraw.Draw(frame)
-        font = ImageFont.truetype('Alexandria-Regular.ttf', 20, encoding='utf-8')
+        font = ImageFont.truetype('IqArab/plugins/Alexandria-Regular.ttf', 20, encoding='utf-8')
         gif_frame.text((250,350), text, font=font)
         del gif_frame
         b = io.BytesIO()
