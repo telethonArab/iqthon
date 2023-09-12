@@ -1894,7 +1894,7 @@ if Config.TG_BOT_USERNAME is not None and tgbot is not None:
         
         if query.startswith("اوردر(?: |$)(.*)") and iqthon.query.user_id == bot.uid:
             try:
-                buttons = [[Button.inline("اوامر السورس", data="order1"), Button.inline("اوامر الحساب", data="ord1hs"),],[Button.inline("اوامر الكروب", data="ord1G"), Button.inline("اوامر الالعاب", data="ord1pl"),],[Button.inline("اوامر الصيغ", data="ordsag1"), Button.inline("اوامر الاغاني", data="ordSONG"),], [Button.inline("اسم وقتي", data="order13"), Button.inline("اوامر الاعلانات", data="ordahln1"),],[Button.inline("اوامر التسليه", data="order14"),],[Button.inline("الفارات", data="ordvars"),]]
+                buttons = [[Button.inline("اوامر السورس", data="order1"), Button.inline("اوامر الحساب", data="ord1hs"),],[Button.inline("اوامر الكروب", data="ord1G"), Button.inline("اوامر الالعاب", data="ord1pl"),],[Button.inline("اوامر الصيغ", data="shag1"), Button.inline("اوامر الاغاني", data="ordSONG"),], [Button.inline("اسم وقتي", data="order13"), Button.inline("اوامر الاعلانات", data="ordahln1"),],[Button.inline("اوامر التسليه", data="order14"),],[Button.inline("الفارات", data="ordvars"),]]
                 result = builder.article(title="iqthon",text=help2,buttons=buttons,link_preview=False)
                 await iqthon.answer([result] if result else None)
             except BotInlineDisabledError: 
@@ -2325,27 +2325,16 @@ async def inlineiqthon(iqthon):
 شرح الأوامر : ( @L3LL3 ) .
 قناه السورس : ( @IQTHON ) ."""
 
-    buttons = [[Button.inline("اوامر الالعاب  2", data="play2"),],[Button.inline("اوامر الالعاب  3", data="play3"),],[Button.inline("رجوع", data="orders"),]]
+    buttons = [[Button.inline("رجوع", data="orders"),]]
     await iqthon.edit(text, buttons=buttons)
-@iqthon.tgbot.on(CallbackQuery(data=re.compile(rb"play2")))
-@check_owner
-async def inlineiqthon(iqthon):
-    text = "**🚹  ⦑   اوامر الالعاب 2   ⦒  :**\n\n⤪⟿⟿⟿⟿⟿⟿⟿⟿⟿⟿⟿⤮ \n**⑻ ⦙ `.رسم شعار + الاسم` \n**✐ : يرسم شعار للأسم  ❝**\n⑼ ⦙ `.نص ثري دي + الكلمه`\n**✐ : يقوم بكتابه الكلمه بشكل ثلاثي الابعاد~  ❝**\n⑽ ⦙ `.كلام متحرك + الكلام`\n**✐ : يقوم بكتابه الكلام حرف حرف  ❝**\n⑾  ⦙  `.ملصق متحرك + الكلام`\n**✐ : يقوم بكتابه الكلام بملصق متحرك  ❝**\n⑿ ⦙  `.بورن + معرف الشخص + الكلام + الرد ع اي صوره`\n**✐ :  قم بتجربه الامر لتعرفه +18  ❝**\n⒀ ⦙ `.رسم قلوب + الاسم`\n**✐ : يكتب الاسم ع شكل قلوب  ❝**\n\n⤪⟿⟿⟿⟿⟿⟿⟿⟿⟿⟿⟿⤮\n"
-    buttons = [[Button.inline("اوامر الالعاب 1", data="play1"),],[Button.inline("اوامر الالعاب  3", data="play3"),],[Button.inline("رجوع", data="orders"),]]
-    await iqthon.edit(text, buttons=buttons)
-@iqthon.tgbot.on(CallbackQuery(data=re.compile(rb"play3")))
-@check_owner
-async def inlineiqthon(iqthon):
-    text = "**🚹  ⦑  اوامر الالعاب 3  ⦒  :**\n\n⑴  ⦙  `.كتابه وهمي + عدد الثواني`\n\n⑵  ⦙  `.فيديو وهمي + عدد الثواني`\n\n⑶  ⦙  `.صوره وهمي + عدد الثواني`\n\n⑷  ⦙  `.جهه اتصال وهمي + عدد الثواني`\n\n⑸  ⦙  `.موقع وهمي + عدد الثواني`\n\n⑹  ⦙  `.لعب وهمي + عدد الثواني`\n\n\n**شرح :  هذا الامر يقوم بالارسال الوهمي يعني يضهر للناس انو نته جاي تكتب او جاي ترسل صوره او ترسل فيديو او ترسل جهه اتصالك حسب الفتره الي تحددها بالثواني**"
-    buttons = [[Button.inline("اوامر الالعاب 1", data="play1"),],[Button.inline("اوامر الالعاب  2", data="play2"),],[Button.inline("رجوع", data="orders"),]]
-    await iqthon.edit(text, buttons=buttons)
+
 
 
 @iqthon.tgbot.on(CallbackQuery(data=re.compile(rb"ord1pl")))
 @check_owner
 async def inlineiqthon(iqthon):
     text = "**🚹  ⦑   اوامر الالعاب   ⦒  :**"
-    buttons = [[Button.inline("اوامر الالعاب  1", data="play1"),],[Button.inline("اوامر الالعاب 2", data="play2"),],[Button.inline("اوامر الالعاب 3", data="play3"),],[Button.inline("رجوع", data="orders"),]]
+    buttons = [[Button.inline("اوامر الالعاب  1", data="play1"),],[Button.inline("رجوع", data="orders"),]]
     await iqthon.edit(text, buttons=buttons)
 
 
@@ -2396,7 +2385,7 @@ async def inlineiqthon(iqthon):
 شرح الأوامر : ( @L3LL3 ) .
 قناه السورس : ( @IQTHON ) ."""
 
-    buttons = [[Button.inline("اوامر تحويل الصيغ  2", data="shag2"),],[Button.inline("رجوع", data="orders"),]]
+    buttons = [[Button.inline("رجوع", data="orders"),]]
     await iqthon.edit(text, buttons=buttons)
 @iqthon.tgbot.on(CallbackQuery(data=re.compile(rb"shag2")))
 @check_owner
