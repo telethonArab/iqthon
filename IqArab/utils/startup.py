@@ -57,7 +57,7 @@ async def setinlinemybot():
     try:
         inlinestarbot = await iqthon.tgbot.get_me()
         bot_name = inlinestarbot.first_name
-#        botname = f"@{inlinestarbot.username}"
+        botname = f"@{inlinestarbot.username}"
         Arab = "IQTHON ARAB"
         if bot_name.endswith("Assistant"):
             print("تم تشغيل البوت")
@@ -67,7 +67,7 @@ async def setinlinemybot():
             try:
                 await iqthon.send_message("@BotFather", "/setinline")
                 await asyncio.sleep(1)
-                await iqthon.send_message("@BotFather", TG_BOT)
+                await iqthon.send_message("@BotFather", botname)
                 await asyncio.sleep(1)
                 await iqthon.send_message("@BotFather", Arab)
                 await asyncio.sleep(2)
