@@ -17,6 +17,7 @@ from .klanr import load_module
 from .tools import create_supergroup
 LOGS = logging.getLogger("تليثون العرب \n ")
 cmdhr = Config.COMMAND_HAND_LER
+TG_BOT = Config.TG_BOT_USERNAME
 async def load_plugins(folder):
     path = f"IqArab/{folder}/*.py"
     files = glob.glob(path)
@@ -55,7 +56,7 @@ async def setinlinemybot():
     try:
         inlinestarbot = await iqthon.tgbot.get_me()
         bot_name = inlinestarbot.first_name
-        botname = f"@{inlinestarbot.username}"
+#        botname = f"@{inlinestarbot.username}"
         Arab = "IQTHON ARAB"
         if bot_name.endswith("Assistant"):
             print("تم تشغيل البوت")
@@ -65,7 +66,7 @@ async def setinlinemybot():
             try:
                 await iqthon.send_message("@BotFather", "/setinline")
                 await asyncio.sleep(1)
-                await iqthon.send_message("@BotFather", botname)
+                await iqthon.send_message("@BotFather", TG_BOT)
                 await asyncio.sleep(1)
                 await iqthon.send_message("@BotFather", Arab)
                 await asyncio.sleep(2)
