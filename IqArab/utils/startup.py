@@ -50,6 +50,30 @@ async def startupmessage():
     except Exception as e:
         LOGS.error(e)
         return None
+
+async def setinlinemybot():
+    try:
+        inlinestarbot = await iqthon.tgbot.get_me()
+        bot_name = inlinestarbot.first_name
+        botname = f"@{inlinestarbot.username}"
+        Arab = "IQTHON ARAB"
+        if bot_name.endswith("Assistant"):
+            print("تم تشغيل البوت")
+        if inlinestarbot.bot_inline_placeholder:
+            print("Arab 🟢")
+        else:
+            try:
+                await iqthon.send_message("@BotFather", "/setinline")
+                await asyncio.sleep(1)
+                await iqthon.send_message("@BotFather", botname)
+                await asyncio.sleep(1)
+                await iqthon.send_message("@BotFather", Arab)
+                await asyncio.sleep(2)
+            except Exception as e:
+                print(e)
+    except Exception as e:
+        print(e)
+
 async def add_bot_to_logger_group(chat_id):
     bot_details = await iqthon.tgbot.get_me()
     try:
