@@ -8,7 +8,7 @@ from telethon import functions
 from .Config import Config
 from .core.logger import logging
 from .core.session import iqthon
-from .utils import add_bot_to_logger_group, load_plugins, setup_bot, startupmessage, verifyLoggerGroup
+from .utils import add_bot_to_logger_group, load_plugins, setup_bot, startupmessage, verifyLoggerGroup ,setinlinemybot
 LOGS = logging.getLogger("تليثون العرب")
 print(IqArab.__copyright__)
 print("المرخصة بموجب شروط " + IqArab.__license__)
@@ -20,6 +20,15 @@ try:
 except Exception as e:
     LOGS.error(f"{str(e)}")
     sys.exit()
+try:
+    LOGS.info("يتم تفعيل وضع الانلاين")
+    iqthon.loop.run_until_complete(setinlinemybot())
+    LOGS.info("تم تفعيل وضع الانلاين بنجاح ✓")
+except Exception as e:
+    LOGS.error(f"{str(e)}")
+    sys.exit()    
+
+
 class CatCheck:
     def __init__(self):
         self.sucess = True
