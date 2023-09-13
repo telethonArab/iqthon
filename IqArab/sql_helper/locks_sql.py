@@ -171,6 +171,33 @@ iqvois91 = "IqArab/helpers/styles/Voic/وينهم.ogg"
 iqvois92 = "IqArab/helpers/styles/Voic/هيلو سامر وحود.ogg"
 iqvois93 = "IqArab/helpers/styles/Voic/هو.ogg"
 iqvois94 = "IqArab/helpers/styles/Voic/ههاي الافكار حطها.ogg"
+iqvois95 = "IqArab/helpers/styles/Voic/الله يساعدك عيوني.ogg"
+iqvois96 = "IqArab/helpers/styles/Voic/يلعن دين امك.ogg"
+iqvois97 = "IqArab/helpers/styles/Voic/ياخي والله فشله.ogg"
+iqvois98 = "IqArab/helpers/styles/Voic/صدقني لو اعرف.ogg"
+iqvois99 = "IqArab/helpers/styles/Voic/لك قفصوني.ogg"
+iqvois100 = "IqArab/helpers/styles/Voic/علاوي حبيب قلبي.ogg"
+iqvois101 = "IqArab/helpers/styles/Voic/كاله انه2.ogg"
+iqvois102 = "IqArab/helpers/styles/Voic/هي انداست.ogg"
+iqvois103 = "IqArab/helpers/styles/Voic/اني سمعي ثقيل.ogg"
+iqvois104 = "IqArab/helpers/styles/Voic/خوات كحه.ogg"
+iqvois105 = "IqArab/helpers/styles/Voic/بالامس كانو معي.ogg"
+iqvois106 = "IqArab/helpers/styles/Voic/لالتغلط.ogg"
+iqvois107 = "IqArab/helpers/styles/Voic/مفخخة.ogg"
+iqvois108 = "IqArab/helpers/styles/Voic/قررت احتل العالم.ogg"
+iqvois109 = "IqArab/helpers/styles/Voic/صوت صرصور.ogg"
+iqvois110 = "IqArab/helpers/styles/Voic/تعال كلكله.ogg"
+iqvois111 = "IqArab/helpers/styles/Voic/ياساتر.ogg"
+iqvois112 = "IqArab/helpers/styles/Voic/كال انه.ogg"
+iqvois113 = "IqArab/helpers/styles/Voic/تعال احط رجلي.ogg"
+iqvois114 = "IqArab/helpers/styles/Voic/احمد محسن.ogg"
+
+
+
+
+
+
+
 
 def get_locks(chat_id):
     try:
