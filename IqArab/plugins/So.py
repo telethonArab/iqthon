@@ -1901,7 +1901,7 @@ if Config.TG_BOT_USERNAME is not None and tgbot is not None:
 @iqthon.tgbot.on(CallbackQuery(data=re.compile(rb"orders")))
 @check_owner
 async def inlineiqthon(iqthon):
-    text = "**⁂︙ قـائمـه الاوامـر :**\n**⁂︙ قنـاه السـورس :** @IQTHON\n**⁂︙ شـرح اوامـر السـورس : @L3LL3**\n**⁂︙ شـرح فـارات السـورس : @TEAMTELETHON** "
+    text = "**⁂︙ قـائمـه الاوامـر :**\n**⁂︙ قنـاه السـورس :** @IQTHON\n**⁂︙ شـرح اوامـر السـورس : @L3LL3** "
     buttons = [[Button.inline("اوامر السورس", data="orderS1"), Button.inline("اوامر الحساب", data="ord1hs"),],[Button.inline("اوامر الكروب", data="ord1G"), Button.inline("اوامر الالعاب", data="play1"),],[Button.inline("اوامر الصيغ", data="shag1"), Button.inline("اوامر الاغاني", data="ordSONG"),], [Button.inline("اسم وقتي", data="order13"), Button.inline("اوامر السوبرات", data="ordahln1"),],[Button.inline("اوامر التسليه", data="order14") , Button.inline("الفارات", data="ordvars"),],[Button.inline("اوامر البصمات", data="order16") , Button.inline("اوامر التكرار", data="order17"),],[Button.inline("اوامر الزخرفة", data="order18") , Button.inline("اوامر الوسائط", data="order19"),],[Button.inline("اوامر الملصقات", data="order20") , Button.inline("اوامر الصيد", data="order21"),],[Button.inline("اوامر المكالمات", data="order22"),]]
     await iqthon.edit(text, buttons=buttons)
 
