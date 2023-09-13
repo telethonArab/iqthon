@@ -94,51 +94,6 @@ def convert_from_bytes(size):
         n += 1
     return f"{round(size, 2)} {units[n]}"
 
-@iqthon.on(admin_cmd(pattern=f"{ALIVE}(?: |$)(.*)"))     
-async def iq(iqthonevent):
-    reply_to_id = await reply_id(iqthonevent)
-    uptime = await get_readable_time((time.time() - StartTime))
-    start = datetime.now()
-    iqevent = await edit_or_reply(iqthonevent, "**⁂︙ جاري فحص السورس **")
-    end = datetime.now()
-    ms = (end - start).microseconds / 1000
-    _, check_sgnirts = check_data_base_heal_th()
-    EMOJI = gvarstatus("ALIVE_EMOJI") or "⁂︙"
-    ALIVE_TEXT = gvarstatus("ALIVE_TEXT") or "𝗐𝖾𝗅𝖼𝗈𝗆𝖾 𝗍𝖾𝗅𝖾𝗍𝗁𝗈𝗇 𝖺𝗅 𝖺𝗋𝖺𝖻 𓃠"
-    IQTHON_IMG = gvarstatus("ALIVE_PIC") or "https://telegra.ph/file/7fe6990ff2291b21af220.mp4"
-    tg_bot = Config.TG_BOT_USERNAME
-    me = await iqthonevent.client.get_me()
-    my_last = me.last_name
-    my_mention = f"[{me.last_name}](tg://user?id={me.id})"
-    TM = time.strftime("%I:%M")
-    iqcaption = gvarstatus("ALIVE_TELETHONIQ") or fahs
-    caption = iqcaption.format(        ALIVE_TEXT=ALIVE_TEXT,
-        EMOJI=EMOJI,
-        mention=mention,
-        uptime=uptime,                
-        pyver=python_version(),
-        dbhealth=check_sgnirts,
-        ping=ms,
-        my_mention=my_mention,
-        TM=TM,
-        tg_bot=tg_bot,    )
-    if IQTHON_IMG:
-        CAT = [x for x in IQTHON_IMG.split()]
-        PIC = random.choice(CAT)
-        try:
-            await iqthonevent.client.send_file(iqthonevent.chat_id, PIC, caption=caption, reply_to=reply_to_id)
-            await iqevent.delete()
-        except (WebpageMediaEmptyError, MediaEmptyError, WebpageCurlFailedError):
-            return await edit_or_reply(iqevent)
-    else:
-        await edit_or_reply(iqevent,caption)
-fahs = """‎⿻┊My ⁂ {my_mention} ٫
-‌‎⿻┊BoT ⁂ {tg_bot} ٫
-‌‎⿻┊TimE ⁂ {TM} ٫
-‌‎⿻┊UpTimE ⁂ {uptime} ٫
-‌‎⿻┊‌‎PinG ⁂ {ping} ٫
-‌‎⿻┊‌‎VeRsIoN mastar (8.3) ,
-‌‎⿻┊‌‎TeLeThoN Arab ⁂ @IQTHON"""
 
 @iqthon.on(admin_cmd(pattern="رابط التنصيب(?: |$)(.*)"))    
 async def source(e):
