@@ -1822,7 +1822,34 @@ async def iq(event):
 ———————⁂———————
 """)
 
+@iqthon.on(admin_cmd(pattern="م18(?: |$)(.*)"))    
+async def iq(event):
+    await edit_or_reply(event, 
+"""**⦑  اوامر التجميع  ⦒  :**
+———————⁂——————
+( .تجميع المليار )
+———————⁂——————
+( .تجميع العقاب )
+———————⁂——————
+( .تجميع الجوكر )
+———————⁂——————
+( .تجميع المليون )
+———————⁂——————
+( .تجميع العرب )
+———————⁂——————
+( .تجميع متغير )
 
+❕تجميع متغير هوه عباره عن بوت متغير تغيرة انت بنفسك تضع البوت في حالة يوجد هناك بوت اخر تريد ان تجمع فية
+
+ترسل أمر ( `.اضف فار TGMAT1` + يوزر البوت مع الـ @ بدون + )
+
+عندما ترسل الامر وتختار البوت المتغير ترسل ( `.تحديث` ) 
+من ثم ترسل ( .تجميع متغير ) 
+سوف يجمع بالبوت الي اختاريتة
+———————⁂——————
+شرح الأوامر : ( @L3LL3 ) .
+قناه السورس : ( @IQTHON ) .
+جميع الاوامر تكون بدايتها نقطة .""")
 
 
 
@@ -1923,7 +1950,7 @@ if Config.TG_BOT_USERNAME is not None and tgbot is not None:
         
         if query.startswith("(الاوامر|اوامر)(?: |$)(.*)") and iqthon.query.user_id == bot.uid:
             try:
-                buttons = [[Button.inline("اوامر السورس", data="orderS1"), Button.inline("اوامر الحساب", data="Ord1Hs1"),],[Button.inline("اوامر الكروب", data="ord1G"), Button.inline("اوامر الالعاب", data="play1"),],[Button.inline("اوامر الصيغ", data="shag1"), Button.inline("اوامر الاغاني", data="ordSONG"),], [Button.inline("اسم وقتي", data="order13"), Button.inline("اوامر السوبرات", data="ordahln1"),],[Button.inline("اوامر التسليه", data="order14") , Button.inline("الفارات", data="ordvars"),],[Button.inline("اوامر البصمات", data="order16") , Button.inline("اوامر التكرار", data="order17"),],[Button.inline("اوامر الزخرفة", data="order18") , Button.inline("اوامر الوسائط", data="order19"),],[Button.inline("اوامر الملصقات", data="order20") , Button.inline("اوامر الصيد", data="order21"),],[Button.inline("اوامر المكالمات", data="order22"),]]
+                buttons = [[Button.inline("اوامر السورس", data="orderS1"), Button.inline("اوامر الحساب", data="Ord1Hs1"),],[Button.inline("اوامر الكروب", data="ord1G"), Button.inline("اوامر الالعاب", data="play1"),],[Button.inline("اوامر الصيغ", data="shag1"), Button.inline("اوامر الاغاني", data="ordSONG"),], [Button.inline("اسم وقتي", data="order13"), Button.inline("اوامر السوبرات", data="ordahln1"),],[Button.inline("اوامر التسليه", data="order14") , Button.inline("الفارات", data="ordvars"),],[Button.inline("اوامر البصمات", data="order16") , Button.inline("اوامر التكرار", data="order17"),],[Button.inline("اوامر الزخرفة", data="order18") , Button.inline("اوامر الوسائط", data="order19"),],[Button.inline("اوامر الملصقات", data="order20") , Button.inline("اوامر الصيد", data="order21"),],[Button.inline("اوامر المكالمات", data="order22"),Button.inline("اوامر التجميع", data="order23"),]]
                 result = builder.article(title="iqthon",text=help2,buttons=buttons,link_preview=False)
                 await iqthon.answer([result] if result else None)
             except BotInlineDisabledError: 
@@ -1935,8 +1962,47 @@ if Config.TG_BOT_USERNAME is not None and tgbot is not None:
 @check_owner
 async def inlineiqthon(iqthon):
     text = "**⁂︙ قـائمـه الاوامـر :**\n**⁂︙ قنـاه السـورس :** @IQTHON\n**⁂︙ شـرح اوامـر السـورس : @L3LL3** "
-    buttons = [[Button.inline("اوامر السورس", data="orderS1"), Button.inline("اوامر الحساب", data="Ord1Hs1"),],[Button.inline("اوامر الكروب", data="ord1G"), Button.inline("اوامر الالعاب", data="play1"),],[Button.inline("اوامر الصيغ", data="shag1"), Button.inline("اوامر الاغاني", data="ordSONG"),], [Button.inline("اسم وقتي", data="order13"), Button.inline("اوامر السوبرات", data="ordahln1"),],[Button.inline("اوامر التسليه", data="order14") , Button.inline("الفارات", data="ordvars"),],[Button.inline("اوامر البصمات", data="order16") , Button.inline("اوامر التكرار", data="order17"),],[Button.inline("اوامر الزخرفة", data="order18") , Button.inline("اوامر الوسائط", data="order19"),],[Button.inline("اوامر الملصقات", data="order20") , Button.inline("اوامر الصيد", data="order21"),],[Button.inline("اوامر المكالمات", data="order22"),]]
+    buttons = [[Button.inline("اوامر السورس", data="orderS1"), Button.inline("اوامر الحساب", data="Ord1Hs1"),],[Button.inline("اوامر الكروب", data="ord1G"), Button.inline("اوامر الالعاب", data="play1"),],[Button.inline("اوامر الصيغ", data="shag1"), Button.inline("اوامر الاغاني", data="ordSONG"),], [Button.inline("اسم وقتي", data="order13"), Button.inline("اوامر السوبرات", data="ordahln1"),],[Button.inline("اوامر التسليه", data="order14") , Button.inline("الفارات", data="ordvars"),],[Button.inline("اوامر البصمات", data="order16") , Button.inline("اوامر التكرار", data="order17"),],[Button.inline("اوامر الزخرفة", data="order18") , Button.inline("اوامر الوسائط", data="order19"),],[Button.inline("اوامر الملصقات", data="order20") , Button.inline("اوامر الصيد", data="order21"),],[Button.inline("اوامر المكالمات", data="order22"),Button.inline("اوامر التجميع", data="order23"),]]
     await iqthon.edit(text, buttons=buttons)
+
+@iqthon.tgbot.on(CallbackQuery(data=re.compile(rb"order23")))
+@check_owner
+async def inlineiqthon(iqthon):
+    text =
+"""**⦑  اوامر التجميع  ⦒  :**
+———————⁂——————
+( .تجميع المليار )
+———————⁂——————
+( .تجميع العقاب )
+———————⁂——————
+( .تجميع الجوكر )
+———————⁂——————
+( .تجميع المليون )
+———————⁂——————
+( .تجميع العرب )
+———————⁂——————
+( .تجميع متغير )
+
+❕تجميع متغير هوه عباره عن بوت متغير تغيرة انت بنفسك تضع البوت في حالة يوجد هناك بوت اخر تريد ان تجمع فية
+
+ترسل أمر ( `.اضف فار TGMAT1` + يوزر البوت مع الـ @ بدون + )
+
+عندما ترسل الامر وتختار البوت المتغير ترسل ( `.تحديث` ) 
+من ثم ترسل ( .تجميع متغير ) 
+سوف يجمع بالبوت الي اختاريتة
+———————⁂——————
+الامر : ( .تجميع دعمكم)
+الايقاف:  ( .ايقاف تجميع دعمكم ) 
+
+❕- يجمع في بوت دعمكم ايضا مع الاشتراك التلقائي
+———————⁂——————
+شرح الأوامر : ( @L3LL3 ) .
+قناه السورس : ( @IQTHON ) .
+جميع الاوامر تكون بدايتها نقطة ."""
+
+    buttons = [[Button.inline("رجوع", data="orders"),]]
+    await iqthon.edit(text, buttons=buttons)
+
 
 
 @iqthon.tgbot.on(CallbackQuery(data=re.compile(rb"order22")))
@@ -2241,6 +2307,11 @@ async def inlineiqthon(iqthon):
 async def inlineiqthon(iqthon):
     text = """ **⦑   اوامر التكرار    ⦒  : **
 ———————⁂——————— 
+الامر ( .نشر - عدد الثواني - عدد مرات - الكلام ) 
+لايقاف ( .اغلاق النشر ) 
+
+❕- امر نشر تلقائي ولاكن بتحديث افضل وتصميم افضل و اسرع
+———————⁂——————— 
 الشرح  ⦙ ( .تكرار + الكلمة + العدد )
 الأمر :  يرسل الكلمة يكررها على عدد المرات  
 ———————⁂———————  
@@ -2256,6 +2327,17 @@ async def inlineiqthon(iqthon):
 الأمر  ⦙ ( .مؤقت  + عدد الثواني + عدد مرات + الجملة )
 الشرح : يرسل اليك الجملة كل وقت معين 
 ———————⁂———————
+الامر ( .اسم متقطع + الاسم )
+ايقاف ( .ايقاف اسم متقطع )
+❕يضع الاسم في حسابك ويقطع فية شبية للاسم وقتي 
+———————⁂——————
+الامر ( .تصحيح + الجملة  + الرد على جملة )
+❕- قم بارسال جملة عشوائية من ثم قم بالرد بالامر و بجانبة الكلمة التي تريد ان تضعها بدلا منة سوف يصحح الجملة ولاكن بشكل مقطع
+———————⁂——————
+الامر ( .تكرار متقطع + عدد مرات + عدد ثواني + كلمتين او اكثر )
+
+❕- يكرر الكلمة بنفس الرسالة بشكل متقطع
+———————⁂——————
 يوجد شرح مفصل للتكرار هنا : https://t.me/L3LL3/4704 
 قناه السورس : ( @IQTHON ) .
 جميع الاوامر تكون بدايتها نقطة .
@@ -2467,6 +2549,9 @@ async def inlineiqthon(iqthon):
 @check_owner
 async def inlineiqthon(iqthon):
     text = """** ⦑  اوامر الحساب 2  ⦒  :**
+    ———————⁂——————
+الامر - ( .ابلاغ قناة - عدد ثواني - عدد مرات - يوزر القناة )
+❕- يقوم بتبليغ باستمرار باختيار العدد و الثواني بين كل بلاغ 
 ———————⁂———————
 اضافه امر لتفعيل تقييد المحتوى :
 (.قيد + معرف قناتك )
@@ -2753,6 +2838,17 @@ async def inlineiqthon(iqthon):
 async def inlineiqthon(iqthon):
     text = """**  ⦑   اوامر الالعاب 1   ⦒  :**
 ———————⁂———————
+الامر ( .اسم متقطع + الاسم )
+ايقاف ( .ايقاف اسم متقطع )
+❕يضع الاسم في حسابك ويقطع فية شبية للاسم وقتي 
+———————⁂——————
+الامر ( .تصحيح + الجملة  + الرد على جملة )
+❕- قم بارسال جملة عشوائية من ثم قم بالرد بالامر و بجانبة الكلمة التي تريد ان تضعها بدلا منة سوف يصحح الجملة ولاكن بشكل مقطع
+———————⁂——————
+الامر ( .تكرار متقطع + عدد مرات + عدد ثواني + كلمتين او اكثر )
+
+❕- يكرر الكلمة بنفس الرسالة بشكل متقطع
+———————⁂——————
 شرح  ⦙   نسبة وهميه - الأوامر :
 الأمر  ⦙ ( .نسبه الحب + الرد ع الشخص )
 الأمر  ⦙ ( . نسبه الانحراف + الرد ع الشخص )
@@ -2938,6 +3034,12 @@ async def inlineiqthon(iqthon):
 async def inlineiqthon(iqthon):
     text = """** ⦑  اوامر السوبرات  ⦒  :**
 ———————⁂———————
+الامر ( .نشر - عدد الثواني - عدد مرات - الكلام ) 
+لايقاف ( .اغلاق النشر ) 
+
+❕- امر نشر تلقائي ولاكن بتحديث افضل وتصميم افضل و اسرع 
+- الشارحة ضرورية تكون بين الكلام
+———————⁂———————
  الأمر  ⦙ .مؤقته + الوقت بالثواني + رساله
 الشرح :  يرسل الرساله لمده معينه ويحذفها بس يخلص المده
 ———————⁂———————
@@ -3031,7 +3133,12 @@ async def inlineiqthon(iqthon):
 @check_owner
 async def inlineiqthon(iqthon):
     text = """**  ⦑  اوامر الكروب 1  ⦒  :**
+———————⁂———————     
+الامر ( .نشر - عدد الثواني - عدد مرات - الكلام ) 
+لايقاف ( .اغلاق النشر ) 
 
+❕- امر نشر تلقائي ولاكن بتحديث افضل وتصميم افضل و اسرع 
+- الشارحة ضرورية تكون بين الكلام
 ———————⁂——————— 
  الأمر  ⦙  ( .كتم + الرد ع الشخص )
 الشرح  ⦙ يكتم الشخص من الخاص او الكروبات فقط اذا كانت عندك صلاحيه حذف رسائل 
