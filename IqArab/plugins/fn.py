@@ -2678,7 +2678,7 @@ async def disable_w3d(event):
 @iqthon.iq_cmd(pattern="كلمات وعد (.*)")
 async def klmetwed(event):
     for i in range(int("".join(event.text.split(maxsplit=2)[2:]).split(" ", 2)[0])):
-        chat = event.chat_«id
+        chat = event.chat_id
         await iqthon.send_message(chat, "كلمات")
         await asyncio.sleep(0.5)
         masg = await iqthon.get_messages(chat, limit=1)
