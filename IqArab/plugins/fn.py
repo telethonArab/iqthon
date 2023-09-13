@@ -2575,22 +2575,110 @@ async def _(event):
     for i in animation_ttl:
         await asyncio.sleep(animation_interval)
         await catevent.edit(animation_chars[i % 4])
-@iqthon.iq_cmd(pattern="بخشيش وعد (.*)")
-async def bkshashwid(event):
-    for i in range(int("".join(event.text.split(maxsplit=2)[2:]).split(" ", 2)[0])):
-        chat = event.chat_id
-        await iqthon.send_message(chat, "بخشيش")
-        await asyncio.sleep(605)
-@iqthon.iq_cmd(pattern="راتب وعد (.*)")
-async def ritebweid(event):
-    for i in range(int("".join(event.text.split(maxsplit=2)[2:]).split(" ", 2)[0])):
-        chat = event.chat_id
-        await iqthon.send_message(chat, "راتب")
-        await asyncio.sleep(605)
+
+async def send_message(event, message):
+    await event.respond(f"زرف {message}")
+    await asyncio.sleep(660)
+    global sarqaoid
+    if sarqaoid:
+        await send_message(event, message)
+        
+async def knosendoid(event):
+    await event.respond('راتب')
+    await asyncio.sleep(660)
+    global ritboid
+    if ritboid:
+        await knosendoid(event)  
+@iqthon.iq_cmd(pattern="راتب وعد(?:\s|$)([\s\S]*)")
+async def klanr(event):
+    global ritboid
+    await event.delete()
+    if not ritboid:
+        ritboid = True
+        if event.is_group:
+            await knosendoid(event)
+        else:
+            await event.edit("**هذا الأمر يمكن استخدامه فقط في المجموعات!**")
+@iqthon.iq_cmd(pattern="ايقاف راتب وعد(?:\s|$)([\s\S]*)")
+async def klanr(event):
+    global ritboid
+    ritboid = False
+    await event.edit("**تم تعطيل راتب وعد**")
+
+@iqthon.iq_cmd(pattern="بخشيش وعد(?:\s|$)([\s\S]*)")
+async def klanr(event):
+    global bkshashoid
+    await event.delete()
+    if not bkshashoid:
+        bkshashoid = True
+        if event.is_group:
+            await iqthonsendoid(event)
+        else:
+            await event.edit("**هذا الأمر يمكن استخدامه فقط في المجموعات!**")
+async def iqthonsendoid(event):
+    await event.respond('بخشيش')
+    await asyncio.sleep(660)
+    global bkshashoid
+    if bkshashoid:
+        await iqthonsendoid(event)  
+@iqthon.iq_cmd(pattern="ايقاف بخشيش وعد(?:\s|$)([\s\S]*)")
+async def klanr(event):
+    global bkshashoid
+    bkshashoid = False
+    await event.edit("**تم تعطيل بخشيش وعد**")
+
+@iqthon.iq_cmd(pattern="سرقة وعد(?:\s|$)([\s\S]*)")
+async def klanr(event):
+    global sarqaoid
+    await event.delete()
+    if not sarqaoid:
+        sarqaoid = True
+        if event.is_group:
+            message = event.pattern_match.group(1).strip()
+            if message:
+                await send_message(event, message)
+            else:
+                await event.edit("**يرجى كتابة ايدي الشخص مع الامر!**")
+@iqthon.iq_cmd(pattern="ايقاف سرقة وعد(?:\s|$)([\s\S]*)")
+async def oidkno(event):
+    global sarqaoid
+    sarqaoid = False
+    await event.edit("**تم ايقاف السرقة بنجاح**")
+client = iqthon
+
+@iqthon.iq_cmd(pattern="استثمار وعد")
+async def oidiqthon(event):
+    await event.delete()
+    global iqthonitsoid
+    iqthonitsoid = True
+    while iqthonitsoid:
+        if event.is_group:
+            await event.client.send_message(event.chat_id, "فلوسي")
+            await asyncio.sleep(3)
+            oidiqthon1 = await event.client.get_messages(event.chat_id, limit=1)
+            oidiqthon1 = oidiqthon1[0].message
+            oidiqthon1 = ("".join(oidiqthon1.split(maxsplit=2)[2:])).split(" ", 2)
+            iqthon = oidiqthon1[0]
+            if iqthon.isdigit() and int(iqthon) > 500000000:
+                await event.client.send_message(event.chat_id,f"استثمار {iqthon}")
+                await asyncio.sleep(5)
+                iqthon02 = await event.client.get_messages(event.chat_id, limit=1)
+                await iqthon02[0].click(text="اي ✅")
+            else:
+                await event.client.send_message(event.chat_id, f"استثمار {iqthon}")
+            await asyncio.sleep(1210)
+        
+        else:
+            await event.edit("**فقط في المجموعات !!**")
+@iqthon.iq_cmd(pattern="ايقاف استثمار وعد")
+async def disable_w3d(event):
+    global iqthonitsoid
+    iqthonitsoid = False
+    await event.edit("**تم تعطيل عملية الاستثمار وعد.**")
 @iqthon.iq_cmd(pattern="كلمات وعد (.*)")
 async def klmetwed(event):
     for i in range(int("".join(event.text.split(maxsplit=2)[2:]).split(" ", 2)[0])):
-        chat = event.chat_id
+        chat = event.chat_«id
         await iqthon.send_message(chat, "كلمات")
         await asyncio.sleep(0.5)
         masg = await iqthon.get_messages(chat, limit=1)
@@ -2601,26 +2689,9 @@ async def klmetwed(event):
             await iqthon.send_message(chat, msg)
         else:
             msg = masg[0] + " " + masg[1]
-            await iqthon.send_message(chat, msg)
-@iqthon.iq_cmd(pattern="استثمار وعد (.*)")
-async def astthmerwadi(event):
-    await event.edit(        "**- تم تفعيل الاستثمار ببوت وعد بنجاح لأيقافه ارسل \n`.استثمار وعد 1`"    )
-    for i in range(int("".join(event.text.split(maxsplit=2)[2:]).split(" ", 2)[0])):
-        chat = event.chat_id
-        await iqthon.send_message(chat, "فلوسي")
-        await asyncio.sleep(0.5)
-        masg = await iqthon.get_messages(chat, limit=1)
-        masg = masg[0].message
-        masg = ("".join(masg.split(maxsplit=2)[2:])).split(" ", 2)
-        msg = masg[0]
-        if int(msg) > 500000000:
-            await iqthon.send_message(chat, f"استثمار {msg}")
-            await asyncio.sleep(10)
-            mssag2 = await iqthon.get_messages(chat, limit=1)
-            await mssag2[0].click(text="اي ✅")
-        else:
-            await iqthon.send_message(chat, f"استثمار {msg}")
-        await asyncio.sleep(1210)
+            await iqthon.send_message(chat, msg)    
+    
+
 @iqthon.on(admin_cmd(pattern="جكه(?:\s|$)([\s\S]*)"))
 async def permalink(mention):
     user, custom = await get_user_from_event(mention)
