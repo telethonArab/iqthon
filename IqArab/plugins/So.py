@@ -1968,8 +1968,7 @@ async def inlineiqthon(iqthon):
 @iqthon.tgbot.on(CallbackQuery(data=re.compile(rb"order23")))
 @check_owner
 async def inlineiqthon(iqthon):
-    text =
-"""**⦑  اوامر التجميع  ⦒  :**
+    text = """**⦑  اوامر التجميع  ⦒  :**
 ———————⁂——————
 ( .تجميع المليار )
 ———————⁂——————
