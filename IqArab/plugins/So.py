@@ -2081,7 +2081,7 @@ if Config.TG_BOT_USERNAME is not None and tgbot is not None:
         
         if query.startswith("اوردر(?: |$)(.*)") and iqthon.query.user_id == bot.uid:
             try:
-                buttons = [[Button.inline("اوامر السورس", data="orderS1"), Button.inline("اوامر الحساب", data="ord1hs1"),],[Button.inline("اوامر الكروب", data="ord1G"), Button.inline("اوامر الالعاب", data="play1"),],[Button.inline("اوامر الصيغ", data="shag1"), Button.inline("اوامر الاغاني", data="ordSONG"),], [Button.inline("اسم وقتي", data="order13"), Button.inline("اوامر السوبرات", data="ordahln1"),],[Button.inline("اوامر التسليه", data="order14") , Button.inline("الفارات", data="ordvars"),],[Button.inline("اوامر البصمات", data="order16") , Button.inline("اوامر التكرار", data="order17"),],[Button.inline("اوامر الزخرفة", data="order18") , Button.inline("اوامر الوسائط", data="order19"),],[Button.inline("اوامر الملصقات", data="order20") , Button.inline("اوامر الصيد", data="order21"),],[Button.inline("اوامر المكالمات", data="order22"),]]
+                buttons = [[Button.inline("اوامر السورس", data="orderS1"), Button.inline("اوامر الحساب", data="Ord1Hs1"),],[Button.inline("اوامر الكروب", data="ord1G"), Button.inline("اوامر الالعاب", data="play1"),],[Button.inline("اوامر الصيغ", data="shag1"), Button.inline("اوامر الاغاني", data="ordSONG"),], [Button.inline("اسم وقتي", data="order13"), Button.inline("اوامر السوبرات", data="ordahln1"),],[Button.inline("اوامر التسليه", data="order14") , Button.inline("الفارات", data="ordvars"),],[Button.inline("اوامر البصمات", data="order16") , Button.inline("اوامر التكرار", data="order17"),],[Button.inline("اوامر الزخرفة", data="order18") , Button.inline("اوامر الوسائط", data="order19"),],[Button.inline("اوامر الملصقات", data="order20") , Button.inline("اوامر الصيد", data="order21"),],[Button.inline("اوامر المكالمات", data="order22"),]]
                 result = builder.article(title="iqthon",text=help2,buttons=buttons,link_preview=False)
                 await iqthon.answer([result] if result else None)
             except BotInlineDisabledError: 
@@ -2093,7 +2093,7 @@ if Config.TG_BOT_USERNAME is not None and tgbot is not None:
 @check_owner
 async def inlineiqthon(iqthon):
     text = "**⁂︙ قـائمـه الاوامـر :**\n**⁂︙ قنـاه السـورس :** @IQTHON\n**⁂︙ شـرح اوامـر السـورس : @L3LL3** "
-    buttons = [[Button.inline("اوامر السورس", data="orderS1"), Button.inline("اوامر الحساب", data="ord1hs1"),],[Button.inline("اوامر الكروب", data="ord1G"), Button.inline("اوامر الالعاب", data="play1"),],[Button.inline("اوامر الصيغ", data="shag1"), Button.inline("اوامر الاغاني", data="ordSONG"),], [Button.inline("اسم وقتي", data="order13"), Button.inline("اوامر السوبرات", data="ordahln1"),],[Button.inline("اوامر التسليه", data="order14") , Button.inline("الفارات", data="ordvars"),],[Button.inline("اوامر البصمات", data="order16") , Button.inline("اوامر التكرار", data="order17"),],[Button.inline("اوامر الزخرفة", data="order18") , Button.inline("اوامر الوسائط", data="order19"),],[Button.inline("اوامر الملصقات", data="order20") , Button.inline("اوامر الصيد", data="order21"),],[Button.inline("اوامر المكالمات", data="order22"),]]
+    buttons = [[Button.inline("اوامر السورس", data="orderS1"), Button.inline("اوامر الحساب", data="Ord1Hs1"),],[Button.inline("اوامر الكروب", data="ord1G"), Button.inline("اوامر الالعاب", data="play1"),],[Button.inline("اوامر الصيغ", data="shag1"), Button.inline("اوامر الاغاني", data="ordSONG"),], [Button.inline("اسم وقتي", data="order13"), Button.inline("اوامر السوبرات", data="ordahln1"),],[Button.inline("اوامر التسليه", data="order14") , Button.inline("الفارات", data="ordvars"),],[Button.inline("اوامر البصمات", data="order16") , Button.inline("اوامر التكرار", data="order17"),],[Button.inline("اوامر الزخرفة", data="order18") , Button.inline("اوامر الوسائط", data="order19"),],[Button.inline("اوامر الملصقات", data="order20") , Button.inline("اوامر الصيد", data="order21"),],[Button.inline("اوامر المكالمات", data="order22"),]]
     await iqthon.edit(text, buttons=buttons)
 
 
@@ -2593,7 +2593,7 @@ https://t.me/Teamtelethon/51
     buttons = [[Button.inline("رجوع", data="orders"),]]
     await iqthon.edit(text, buttons=buttons)
 
-@iqthon.tgbot.on(CallbackQuery(data=re.compile(rb"ord1hs1")))
+@iqthon.tgbot.on(CallbackQuery(data=re.compile(rb"Ord1Hs1")))
 @check_owner
 async def inlineiqthon(iqthon):
     text = "**⁂  ⦑   اوامر الحساب   ⦒  :**"
@@ -2624,11 +2624,6 @@ async def inlineiqthon(iqthon):
 لتعديل تجميع  الى بوت اخر أرسل : 
 ( .اضف فار TGMABOT + يوزر البوت مع الـ @
 ———————⁂———————
-الأمر : ( .تجميع بوت دعمكم )
-لتجميع في بوت دعمكم وتشغيلة
-الأمر :  ( .ايقاف تجميع دعمكم) 
-لايقاف تجميع في بوت دعمكم
-———————⁂———————
 تم اضافه ميزات بوت وعد : 
 
 اضافة امر استثمار تلقائي : 
@@ -2642,6 +2637,29 @@ async def inlineiqthon(iqthon):
 
 اضافة امر كلمات تلقائي :  
 ( .كلمات وعد + عدد الاعادة للأمر )
+———————⁂———————
+الأمر ( .فتح الترجمة )
+الأمر ( .اغلاق الترجمة )
+• لترجمة اي شي تكتبة من العربي الى الأنكليزي
+———————⁂———————
+امر : ( .تصفية قنواتي )
+( يحذف جميع القنوات التي في حسابك ماعدا التي حسابك صاعد فيها المشرف او المالك بها لايحذفها )
+———————⁂———————
+امر : ( .تصفية مجموعاتي )
+( يحذف جميع المجموعات التي في حسابك ماعدا المجموعات التي حسابك صاعد فيها المشرف او المالك بها لايحذفها )
+———————⁂———————
+امر : ( .تصفية محادثاتي )
+( يحذف جميع المحادثات التي في حسابك )
+———————⁂———————
+امر : ( .تصفية بوتاتي )
+(يحذف جميع البوتات التي في محادثاتك ايضا لايحذف البوتات التي قمت بصنعها من بوت فاذر  )
+———————⁂———————
+الأمر ( .كشف همسة + الرد على همسة )
+• يفتح الهمسة التي موجة اليك فقط
+———————⁂———————
+الأمر ( .فتح تعديل الميديا )
+الأمر ( .اغلاق تعديل الميديا )
+• لمسح اي تعديل يصير في الفيديوهات او صور او روابط
 ———————⁂———————
 اضافه أمر حفض الصوره الوقتية تلقائيا
 
@@ -2676,29 +2694,6 @@ https://t.me/L3LL3/4833
 @check_owner
 async def inlineiqthon(iqthon):
     text = """**  ⦑   اوامـر الحـسـاب  ⦒ : **
-———————⁂———————
-الأمر ( .فتح الترجمة )
-الأمر ( .اغلاق الترجمة )
-• لترجمة اي شي تكتبة من العربي الى الأنكليزي
-———————⁂———————
-امر : ( .تصفية قنواتي )
-( يحذف جميع القنوات التي في حسابك ماعدا التي حسابك صاعد فيها المشرف او المالك بها لايحذفها )
-———————⁂———————
-امر : ( .تصفية مجموعاتي )
-( يحذف جميع المجموعات التي في حسابك ماعدا المجموعات التي حسابك صاعد فيها المشرف او المالك بها لايحذفها )
-———————⁂———————
-امر : ( .تصفية محادثاتي )
-( يحذف جميع المحادثات التي في حسابك )
-———————⁂———————
-امر : ( .تصفية بوتاتي )
-(يحذف جميع البوتات التي في محادثاتك ايضا لايحذف البوتات التي قمت بصنعها من بوت فاذر  )
-———————⁂———————
-الأمر ( .كشف همسة + الرد على همسة )
-• يفتح الهمسة التي موجة اليك فقط
-———————⁂———————
-الأمر ( .فتح تعديل الميديا )
-الأمر ( .اغلاق تعديل الميديا )
-• لمسح اي تعديل يصير في الفيديوهات او صور او روابط
 ———————⁂———————
 الأمر︙( .معرفه + الرد ع الشخص )
 شرح︙سيجلب لك معرف الشخص 
