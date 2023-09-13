@@ -785,7 +785,7 @@ async def _(event):
 **⁂︙  مع الأخطاء التالية :** {}""".format(                ms,                convert_from_bytes(download_speed),                round(download_speed / 8e6, 2),                convert_from_bytes(upload_speed),                round(upload_speed / 8e6, 2),                ping_time,                str(exc),            )        )
 
 
-@iqthon.on(admin_cmd(pattern=f"{ORDERS}(?: |$)(.*)"))    
+@iqthon.on(admin_cmd(pattern=f"م(?: |$)(.*)"))    
 async def iq(event):
     await edit_or_reply(event, 
 """ **
@@ -2059,14 +2059,14 @@ async def repoiqthon(iqthon):
 
 
 
-@bot.on(admin_cmd(outgoing=True, pattern="اوردر(?: |$)(.*)"))
+@bot.on(admin_cmd(outgoing=True, pattern="(الاوامر|اوامر)(?: |$)(.*)"))
 async def repoiqthon(iqthon):
     if iqthon.fwd_from:
         return
     TG_BOT = Config.TG_BOT_USERNAME
     if iqthon.reply_to_msg_id:
         await iqthon.get_reply_message()
-    response = await bot.inline_query(TG_BOT, "اوردر(?: |$)(.*)")
+    response = await bot.inline_query(TG_BOT, "(الاوامر|اوامر)(?: |$)(.*)")
     await response[0].click(iqthon.chat_id)
     await iqthon.delete()
 
@@ -2079,7 +2079,7 @@ if Config.TG_BOT_USERNAME is not None and tgbot is not None:
         query = iqthon.text
         await bot.get_me()
         
-        if query.startswith("اوردر(?: |$)(.*)") and iqthon.query.user_id == bot.uid:
+        if query.startswith("(الاوامر|اوامر)(?: |$)(.*)") and iqthon.query.user_id == bot.uid:
             try:
                 buttons = [[Button.inline("اوامر السورس", data="orderS1"), Button.inline("اوامر الحساب", data="Ord1Hs1"),],[Button.inline("اوامر الكروب", data="ord1G"), Button.inline("اوامر الالعاب", data="play1"),],[Button.inline("اوامر الصيغ", data="shag1"), Button.inline("اوامر الاغاني", data="ordSONG"),], [Button.inline("اسم وقتي", data="order13"), Button.inline("اوامر السوبرات", data="ordahln1"),],[Button.inline("اوامر التسليه", data="order14") , Button.inline("الفارات", data="ordvars"),],[Button.inline("اوامر البصمات", data="order16") , Button.inline("اوامر التكرار", data="order17"),],[Button.inline("اوامر الزخرفة", data="order18") , Button.inline("اوامر الوسائط", data="order19"),],[Button.inline("اوامر الملصقات", data="order20") , Button.inline("اوامر الصيد", data="order21"),],[Button.inline("اوامر المكالمات", data="order22"),]]
                 result = builder.article(title="iqthon",text=help2,buttons=buttons,link_preview=False)
@@ -2597,7 +2597,7 @@ https://t.me/Teamtelethon/51
 @check_owner
 async def inlineiqthon(iqthon):
     text = "**⁂  ⦑   اوامر الحساب   ⦒  :**"
-    buttons = [[Button.inline("اوامر الحساب  1", data="hsb1"),Button.inline("اوامر الحساب  2", data="hsb2")],[Button.inline("رجوع", data="orders"),]]
+    buttons = [[Button.inline("اوامر الحساب  1", data="hsb1"),Button.inline("اوامر الحساب  2", data="hsbb2")],[Button.inline("رجوع", data="orders"),]]
     await iqthon.edit(text, buttons=buttons)
 
 @iqthon.tgbot.on(CallbackQuery(data=re.compile(rb"hsbb2")))
@@ -3351,7 +3351,7 @@ async def inlineiqthon(iqthon):
 
 
     
-@bot.on(admin_cmd(outgoing=True, pattern="اوردر"))
+@bot.on(admin_cmd(outgoing=True, pattern="(الاوامر|اوامر)"))
 async def repoiqthon(iqthon):
     if iqthon.fwd_from:
         return
@@ -3360,7 +3360,7 @@ async def repoiqthon(iqthon):
     if iqthon.reply_to_msg_id:
         try:
             await iqthon.get_reply_message()
-            response = await bot.inline_query(TG_BOT, "اوردر")
+            response = await bot.inline_query(TG_BOT, "(الاوامر|اوامر)")
             await response[0].click(iqthon.chat_id)
             await iqthon.delete()
         except BotInlineDisabledError: 
