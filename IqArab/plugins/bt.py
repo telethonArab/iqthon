@@ -267,18 +267,18 @@ async def _(event):
     reply_to_id = await reply_id(event)
     if event.reply_to_msg_id:
         reply_to_id = await event.get_reply_message()
-    chat = "@i0zbot"
+    chat = "@telethonmusicbot"
     catevent = await edit_or_reply(event, "**جـارِ الزغـرفـه 💞🧸...**")
     async with event.client.conversation(chat) as conv:
         try:
             response = conv.wait_event(
-                events.NewMessage(incoming=True, from_users=1229877081)
+                events.NewMessage(incoming=True, from_users=1901346862)
             )
             await event.client.send_message(chat, "{}".format(input_str))
             response = await response
             await event.client.send_read_acknowledge(conv.chat_id)
         except YouBlockedUserError:
-            await catevent.edit("** تحـقق من انـك لم تقـم بحظر البوت @i0zbot .. ثم اعـد استخدام الامـر ... ♥️**")
+            await catevent.edit("** تحـقق من انـك لم تقـم بحظر البوت @telethonmusicbot .. ثم اعـد استخدام الامـر ... ♥️**")
             return
         if response.text.startswith("رجاء قم بالرد على الكلمه التي تريد زخرفتها "):
             await catevent.edit("رجاء قم بالرد على الكلمه التي تريد زخرفتها")
