@@ -27,13 +27,13 @@ try:
 except Exception as e:
     LOGS.error(f"{str(e)}")
     sys.exit()    
-try:
-    LOGS.info("يتم تفعيل القنوات")
-    iqthon.loop.run_until_complete(iqchn())
-    LOGS.info("تم تفعيل القنوات ✓")
-except Exception as e:
-    LOGS.error(f"{str(e)}")
-    sys.exit()    
+#try:
+#    LOGS.info("يتم تفعيل القنوات")
+#    iqthon.loop.run_until_complete(iqchn())
+#    LOGS.info("تم تفعيل القنوات ✓")
+#except Exception as e:
+#    LOGS.error(f"{str(e)}")
+#    sys.exit()    
 
 
 class CatCheck:
