@@ -1172,7 +1172,7 @@ async def _(event):
     await event.edit("**جاري تجميع النقاط**")
     joinu = await iqthon(JoinChannelRequest('@Groupiqthon'))
     channel_entity = await iqthon.get_entity("@EEObot")
-    await iqthon.send_message("@EEObot" '/start')
+    await iqthon.send_message("@EEObot", '/start')
     await asyncio.sleep(4)
     msg0 = await iqthon.get_messages("@EEObot", limit=1)
     await msg0[0].click(2)
