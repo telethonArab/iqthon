@@ -117,14 +117,14 @@ async def CheckUpTime(event):
     elapsed_hours, elapsed_minutes, elapsed_seconds = int(elapsed_time // 3600), int((elapsed_time % 3600) // 60), int(elapsed_time % 60)
     Script_uptime = '{}:{:02d}:{:02d}'.format(elapsed_hours, elapsed_minutes, elapsed_seconds)
     
-    final_message = f'''
+    final_message = f"""
 ‌‎⿻┊NamE ⁂ {user.first_name}
 ‌‎⿻┊PyThon ⁂ 3.8 
 ‌‎⿻┊UpTimE ⁂ {uptime}
 ‌‎⿻┊BoT ⁂ {tg_bot} ٫
 ‌‎⿻┊‌‎PinG ⁂ : {await test_speed()}
 ⿻┊‌‎VeRsIoN mastar (8.3) ,
-‌‎⿻┊‌‎TeLeThoN Arab ⁂ @IQTHON"""   
+‌‎⿻┊‌‎TeLeThoN Arab ⁂ @IQTHON"""
     send_new_message = await event.client.send_message(entity=event.chat_id, message=final_message, file=random.choice(random_media))
 
 @iqthon.on(admin_cmd(pattern="رابط التنصيب(?: |$)(.*)"))    
