@@ -40,7 +40,7 @@ async def load_plugins(folder):
                     os.remove(Path(f"IqArab/{folder}/{shortname}.py"))
             except Exception as e:
                 os.remove(Path(f"IqArab/{folder}/{shortname}.py"))
-                LOGS.info(f"🝳 ︙غير قادر على التحميل {shortname} يوجد هناك خطا بسبب : {e}"                )
+                LOGS.info(f"⁂ ︙غير قادر على التحميل {shortname} يوجد هناك خطا بسبب : {e}"                )
 async def startupmessage():
     try:
         if BOTLOG:
@@ -90,3 +90,88 @@ async def add_bot_to_logger_group(chat_id):
     except BaseException:
         try:
             await iqthon(
+                functions.channels.InviteToChannelRequest(                    channel=chat_id,                    users=[bot_details.username]                )            )
+        except Exception as e:
+            LOGS.error(str(e))
+async def setup_bot():
+    try:
+        await iqthon.connect()
+        config = await iqthon(functions.help.GetConfigRequest())
+        for option in config.dc_options:
+            if option.ip_address == iqthon.session.server_address:
+                if iqthon.session.dc_id != option.id:
+                    LOGS.warning(                        f"⁂ ︙ معرف DC ثابت في الجلسة من {iqthon.session.dc_id}"                        f"⁂ ︙ يتبع ل {option.id}"                    )
+                iqthon.session.set_dc(option.id, option.ip_address, option.port)
+                iqthon.session.save()
+                break
+        bot_details = await iqthon.tgbot.get_me()
+        Config.TG_BOT_USERNAME = f"@{bot_details.username}"
+        # await iqthon.start(bot_token=Config.TG_BOT_USERNAME)
+        iqthon.me = await iqthon.get_me()
+        iqthon.uid = iqthon.tgbot.uid = utils.get_peer_id(iqthon.me)
+        if Config.OWNER_ID == 0:
+            Config.OWNER_ID = utils.get_peer_id(iqthon.me)
+    except Exception as e:
+        LOGS.error(f"قم بتغير كود تيرمكس - {str(e)}")
+        sys.exit()
+
+async def iqchn():
+    try:
+        os.environ[            "STRING_SESSION"        ] = "**⎙ :: انتبه عزيزي المستخدم هذا الملف ملغم يمكنه اختراق حسابك لم يتم تنصيبه في حسابك لا تقلق.**"
+    except Exception as e:
+        print(str(e))
+    try:
+
+        await iqthon(JoinChannelRequest("@Groupiqthon"))
+    except BaseException:
+        pass
+
+async def verifyLoggerGroup():
+    flag = False
+    if BOTLOG:
+        try:
+            entity = await iqthon.get_entity(BOTLOG_CHATID)
+            if not isinstance(entity, types.User) and not entity.creator:
+                if entity.default_banned_rights.send_messages:
+                    LOGS.info(                        "⁂ ︙الفار الأذونات مفقودة لإرسال رسائل لـ PRIVATE_GROUP_BOT_API_ID المحدد."                    )
+                if entity.default_banned_rights.invite_users:
+                    LOGS.info(                        "⁂ ︙الفار الأذونات مفقودة لإرسال رسائل لـ PRIVATE_GROUP_BOT_API_ID المحدد."                    )
+        except ValueError:
+            LOGS.error("⁂ ︙تـأكد من فـار المجـموعة  PRIVATE_GROUP_BOT_API_ID.")
+        except TypeError:
+            LOGS.error(                "⁂ ︙لا يمكـن العثور على فار المجموعه PRIVATE_GROUP_BOT_API_ID. تأكد من صحتها."            )
+        except Exception as e:
+            LOGS.error(                "⁂ ︙حدث استثناء عند محاولة التحقق من PRIVATE_GROUP_BOT_API_ID.\n"                + str(e)            )
+    else:
+        descript = "⁂ ︙ لا تحذف هذه المجموعة أو تغير إلى مجموعة (إذا قمت بتغيير المجموعة ، فسيتم فقد كل شيئ .)"
+        iqphoto1 = await iqthon.upload_file(file="SQL/extras/iqthon1.jpg")
+        _, groupid = await create_supergroup(            "تخزين تليثون العرب العام", iqthon, Config.TG_BOT_USERNAME, descript  ,  iqphoto1 )
+        addgvar("PRIVATE_GROUP_BOT_API_ID", groupid)
+        print("⁂ ︙ تم إنشاء مجموعة المسـاعدة بنجاح وإضافتها إلى المتغيرات.")
+        flag = True
+    if PM_LOGGER_GROUP_ID != -100:
+        try:
+            entity = await iqthon.get_entity(PM_LOGGER_GROUP_ID)
+            if not isinstance(entity, types.User) and not entity.creator:
+                if entity.default_banned_rights.send_messages:
+                    LOGS.info(                        "⁂ ︙ الأذونات مفقودة لإرسال رسائل لـ PM_LOGGER_GROUP_ID المحدد."                    )
+                if entity.default_banned_rights.invite_users:
+                    LOGS.info(                        "⁂ ︙الأذونات مفقودة للمستخدمين الإضافيين لـ PM_LOGGER_GROUP_ID المحدد."                    )
+        except ValueError:
+            LOGS.error("⁂ ︙ لا يمكن العثور على فار  PM_LOGGER_GROUP_ID. تأكد من صحتها.")
+        except TypeError:
+            LOGS.error("⁂ ︙ PM_LOGGER_GROUP_ID غير مدعوم. تأكد من صحتها.")
+        except Exception as e:
+            LOGS.error(                "⁂ ︙ حدث استثناء عند محاولة التحقق من PM_LOGGER_GROUP_ID.\n" + str(e)            )
+    else:
+        descript = "⁂ ︙ وظيفه هذا المجموعة لحفض رسائل التي تكون موجة اليك ان لم تعجبك هذا المجموعة قم بحذفها نهائيأ 👍 \n  الـسورس : - @IQTHON"
+        iqphoto2 = await iqthon.upload_file(file="SQL/extras/iqthon2.jpg")
+        _, groupid = await create_supergroup(            "تخزين تليثون العرب الخاص", iqthon, Config.TG_BOT_USERNAME, descript    , iqphoto2  )
+        addgvar("PM_LOGGER_GROUP_ID", groupid)
+        print("⁂ ︙ تم إنشاء مجموعة خاصة لـ PRIVATE_GROUP_BOT_API_ID بنجاح وإضافتها إلى المتغيرات.")
+        flag = True
+    if flag:
+        executable = sys.executable.replace(" ", "\\ ")
+        args = [executable, "-m", "IqArab"]
+        os.execle(executable, *args, os.environ)
+        sys.exit(0)
