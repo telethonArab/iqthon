@@ -1105,7 +1105,7 @@ async def iq(event):
 قناه السورس : ( @IQTHON ) .
 جميع الاوامر تكون بدايتها نقطة .
 """)
-nshriqthon = gvarstatus("NSHR") or ".نشر"
+nshriqthon = gvarstatus("NSHR") or "نشر"
 
 StopSpamming = False
 # post
@@ -1114,14 +1114,14 @@ async def PostNow(event, chat_id, RepeatParagraph, Delay):
     await asyncio.sleep(int(Delay))
 
 
-@iqthon.on(events.NewMessage(outgoing=True, pattern=f'{nshriqthon} ?(.*)'))
+@iqthon.on(events.NewMessage(outgoing=True, pattern=f'.{nshriqthon} ?(.*)'))
 async def RepeatTimer(event):
     global StopSpamming
     
     StopSpamming = False
     
 
-    MESSAGE = ((event.message.message).replace(f"{nshriqthon}", "")).split("-")
+    MESSAGE = ((event.message.message).replace(f".{nshriqthon}", "")).split("-")
     try :
         Delay = int(MESSAGE[1])
         RepeatCount = int(MESSAGE[2])
