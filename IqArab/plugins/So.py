@@ -59,6 +59,7 @@ from telethon.tl.functions.messages import ImportChatInviteRequest
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.functions.contacts import UnblockRequest
 from telethon import client, events
+random_media = ["https://telegra.ph/file/74066cb3ddb0bdba1c4b7.mp4","https://telegra.ph/file/7fe6990ff2291b21af220.mp4","https://telegra.ph/file/924f39c1b02a857704e07.mp4","https://telegra.ph/file/e2f4a83bd10f91c21f07e.mp4","https://telegra.ph/file/fcede8629577608a6e9a0.mp4","https://telegra.ph/file/8ae75b689aa6123fa4a69.mp4"]
 ALIVE = gvarstatus("OR_ALIVE") or "(فحص|السورس)"
 UPDATE = gvarstatus("OR_UPDATE") or "(اعاده تشغيل|تحديث)"
 ORDERS = gvarstatus("OR_ORDERS") or "(الاوامر|ألاوامر|اوامري|أوامري|م)"
@@ -68,6 +69,15 @@ LOGS1 = logging.getLogger(__name__)
 ppath = os.path.join(os.getcwd(), "temp", "githubuser.jpg")
 GIT_TEMP_DIR = "./temp/"
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+#
+async def test_speed():
+    st = speedtest.Speedtest()
+    st.get_best_server()
+    st.download(threads=5)
+    results = st.results.dict()
+    download_speed = f"{round((results['download'] / 1e6), 2)} M/s"
+    return download_speed
+    #
 Heroku = heroku3.from_key(Config.HEROKU_API_KEY)
 heroku_api = "https://api.heroku.com"
 HEROKU_APP_NAME = Config.HEROKU_APP_NAME
@@ -88,51 +98,34 @@ def convert_from_bytes(size):
         n += 1
     return f"{round(size, 2)} {units[n]}"
 
-@iqthon.on(admin_cmd(pattern=f"{ALIVE}(?: |$)(.*)"))     
-async def iq(iqthonevent):
-    reply_to_id = await reply_id(iqthonevent)
+
+Script_uptime, start_time = None, None
+
+# CHECK
+@iqthon.on(events.NewMessage(outgoing=True, pattern=f'.{ALIVE}'))
+async def CheckUpTime(event):
+    global start_time, Script_uptime
+    
+    delete = await event.delete()
+    user = await event.client.get_entity(event.chat_id)
+    if start_time == None:
+        start_time = time.time()
+    
+    elapsed_time = time.time() - start_time
     uptime = await get_readable_time((time.time() - StartTime))
-    start = datetime.now()
-    iqevent = await edit_or_reply(iqthonevent, "**⁂︙ جاري فحص السورس **")
-    end = datetime.now()
-    ms = (end - start).microseconds / 1000
-    _, check_sgnirts = check_data_base_heal_th()
-    EMOJI = gvarstatus("ALIVE_EMOJI") or "⁂︙"
-    ALIVE_TEXT = gvarstatus("ALIVE_TEXT") or "𝗐𝖾𝗅𝖼𝗈𝗆𝖾 𝗍𝖾𝗅𝖾𝗍𝗁𝗈𝗇 𝖺𝗅 𝖺𝗋𝖺𝖻 𓃠"
-    IQTHON_IMG = gvarstatus("ALIVE_PIC") or "https://telegra.ph/file/7fe6990ff2291b21af220.mp4"
     tg_bot = Config.TG_BOT_USERNAME
-    me = await iqthonevent.client.get_me()
-    my_last = me.last_name
-    my_mention = f"[{me.last_name}](tg://user?id={me.id})"
-    TM = time.strftime("%I:%M")
-    iqcaption = gvarstatus("ALIVE_TELETHONIQ") or fahs
-    caption = iqcaption.format(        ALIVE_TEXT=ALIVE_TEXT,
-        EMOJI=EMOJI,
-        mention=mention,
-        uptime=uptime,                
-        pyver=python_version(),
-        dbhealth=check_sgnirts,
-        ping=ms,
-        my_mention=my_mention,
-        TM=TM,
-        tg_bot=tg_bot,    )
-    if IQTHON_IMG:
-        CAT = [x for x in IQTHON_IMG.split()]
-        PIC = random.choice(CAT)
-        try:
-            await iqthonevent.client.send_file(iqthonevent.chat_id, PIC, caption=caption, reply_to=reply_to_id)
-            await iqevent.delete()
-        except (WebpageMediaEmptyError, MediaEmptyError, WebpageCurlFailedError):
-            return await edit_or_reply(iqevent)
-    else:
-        await edit_or_reply(iqevent,caption)
-fahs = """‎⿻┊My ⁂ {my_mention} ٫
+    elapsed_hours, elapsed_minutes, elapsed_seconds = int(elapsed_time // 3600), int((elapsed_time % 3600) // 60), int(elapsed_time % 60)
+    Script_uptime = '{}:{:02d}:{:02d}'.format(elapsed_hours, elapsed_minutes, elapsed_seconds)
+    
+    final_message = f'''
+‌‎⿻┊NamE ⁂ {user.first_name}
+‌‎⿻┊PyThon ⁂ 3.8 
+‌‎⿻┊UpTimE ⁂ {uptime}
 ‌‎⿻┊BoT ⁂ {tg_bot} ٫
-‌‎⿻┊TimE ⁂ {TM} ٫
-‌‎⿻┊UpTimE ⁂ {uptime} ٫
-‌‎⿻┊‌‎PinG ⁂ {ping} ٫
-‌‎⿻┊‌‎VeRsIoN mastar (8.3) ,
-‌‎⿻┊‌‎TeLeThoN Arab ⁂ @IQTHON"""
+‌‎⿻┊‌‎PinG ⁂ : {await test_speed()}
+⿻┊‌‎VeRsIoN mastar (8.3) ,
+‌‎⿻┊‌‎TeLeThoN Arab ⁂ @IQTHON"""   
+    send_new_message = await event.client.send_message(entity=event.chat_id, message=final_message, file=random.choice(random_media))
 
 @iqthon.on(admin_cmd(pattern="رابط التنصيب(?: |$)(.*)"))    
 async def source(e):
