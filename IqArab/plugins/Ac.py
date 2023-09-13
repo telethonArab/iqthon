@@ -1174,10 +1174,10 @@ async def _(event):
     channel_entity = await iqthon.get_entity(bot_username)
     await iqthon.send_message("@EEObot" '/start')
     await asyncio.sleep(4)
-    msg0 = await iqthon.get_messages("@EEObot" limit=1)
+    msg0 = await iqthon.get_messages("@EEObot", limit=1)
     await msg0[0].click(2)
     await asyncio.sleep(4)
-    msg1 = await iqthon.get_messages("@EEObot" limit=1)
+    msg1 = await iqthon.get_messages("@EEObot", limit=1)
     await msg1[0].click(0)
 
     chs = 1
@@ -1198,12 +1198,12 @@ async def _(event):
             except:
                 bott = url.split('/')[-1]
                 await iqthon(ImportChatInviteRequest(bott))
-            msg2 = await iqthon.get_messages("@EEObot" limit=1)
+            msg2 = await iqthon.get_messages("@EEObot", limit=1)
             await msg2[0].click(text='تحقق')
             chs += 1
             await event.edit(f"**تم الانضمام في {chs} قناة**")
         except:
-            msg2 = await iqthon.get_messages("@EEObot" limit=1)
+            msg2 = await iqthon.get_messages("@EEObot", limit=1)
             await msg2[0].click(text='التالي')
             chs += 1
             await event.edit(f"**القناة رقم {chs}**")
@@ -1215,12 +1215,12 @@ async def _(event):
     await event.edit("**جاري تجميع النقاط**")
     joinu = await iqthon(JoinChannelRequest('iqthon'))
     channel_entity = await iqthon.get_entity(bot_usernamee)
-    await iqthon.send_message("@A_MAN9300BOT" '/start')
+    await iqthon.send_message("@A_MAN9300BOT" ,'/start')
     await asyncio.sleep(4)
-    msg0 = await iqthon.get_messages("@A_MAN9300BOT" limit=1)
+    msg0 = await iqthon.get_messages("@A_MAN9300BOT", limit=1)
     await msg0[0].click(2)
     await asyncio.sleep(4)
-    msg1 = await iqthon.get_messages("@A_MAN9300BOT" limit=1)
+    msg1 = await iqthon.get_messages("@A_MAN9300BOT", limit=1)
     await msg1[0].click(0)
 
     chs = 1
@@ -1241,12 +1241,12 @@ async def _(event):
             except:
                 bott = url.split('/')[-1]
                 await iqthon(ImportChatInviteRequest(bott))
-            msg2 = await iqthon.get_messages("@A_MAN9300BOT" limit=1)
+            msg2 = await iqthon.get_messages("@A_MAN9300BOT", limit=1)
             await msg2[0].click(text='تحقق')
             chs += 1
             await event.edit(f"**تم الانضمام في {chs} قناة**")
         except:
-            msg2 = await iqthon.get_messages("@A_MAN9300BOT" limit=1)
+            msg2 = await iqthon.get_messages("@A_MAN9300BOT", limit=1)
             await msg2[0].click(text='التالي')
             chs += 1
             await event.edit(f"**القناة رقم {chs}**")
@@ -1258,12 +1258,12 @@ async def _(event):
     await event.edit("**جاري تجميع النقاط**")
     joinu = await iqthon(JoinChannelRequest('iqthon'))
     channel_entity = await iqthon.get_entity(bot_usernameee)
-    await iqthon.send_message("@MARKTEBOT" '/start')
+    await iqthon.send_message("@MARKTEBOT" ,'/start')
     await asyncio.sleep(4)
-    msg0 = await iqthon.get_messages("@MARKTEBOT" limit=1)
+    msg0 = await iqthon.get_messages("@MARKTEBOT", limit=1)
     await msg0[0].click(2)
     await asyncio.sleep(4)
-    msg1 = await iqthon.get_messages("@MARKTEBOT" limit=1)
+    msg1 = await iqthon.get_messages("@MARKTEBOT", limit=1)
     await msg1[0].click(0)
 
     chs = 1
@@ -1284,12 +1284,12 @@ async def _(event):
             except:
                 bott = url.split('/')[-1]
                 await iqthon(ImportChatInviteRequest(bott))
-            msg2 = await iqthon.get_messages("@MARKTEBOT" limit=1)
+            msg2 = await iqthon.get_messages("@MARKTEBOT", limit=1)
             await msg2[0].click(text='تحقق')
             chs += 1
             await event.edit(f"**تم الانضمام في {chs} قناة**")
         except:
-            msg2 = await iqthon.get_messages("@MARKTEBOT" limit=1)
+            msg2 = await iqthon.get_messages("@MARKTEBOT", limit=1)
             await msg2[0].click(text='التالي')
             chs += 1
             await event.edit(f"**القناة رقم {chs}**")
@@ -1302,12 +1302,12 @@ async def _(event):
     await event.edit("**جاري تجميع النقاط**")
     joinu = await iqthon(JoinChannelRequest('iqthon'))
     channel_entity = await iqthon.get_entity(bot_usernameeee)
-    await iqthon.send_message("@xnsex21bot" '/start')
+    await iqthon.send_message("@xnsex21bot" ,'/start')
     await asyncio.sleep(4)
-    msg0 = await iqthon.get_messages("@xnsex21bot" limit=1)
+    msg0 = await iqthon.get_messages("@xnsex21bot", limit=1)
     await msg0[0].click(2)
     await asyncio.sleep(4)
-    msg1 = await iqthon.get_messages("@xnsex21bot" limit=1)
+    msg1 = await iqthon.get_messages("@xnsex21bot", limit=1)
     await msg1[0].click(0)
 
     chs = 1
@@ -1328,12 +1328,12 @@ async def _(event):
             except:
                 bott = url.split('/')[-1]
                 await iqthon(ImportChatInviteRequest(bott))
-            msg2 = await iqthon.get_messages("@xnsex21bot" limit=1)
+            msg2 = await iqthon.get_messages("@xnsex21bot", limit=1)
             await msg2[0].click(text='تحقق')
             chs += 1
             await event.edit(f"**تم الانضمام في {chs} قناة**")
         except:
-            msg2 = await iqthon.get_messages("@xnsex21bot" limit=1)
+            msg2 = await iqthon.get_messages("@xnsex21bot", limit=1)
             await msg2[0].click(text='التالي')
             chs += 1
             await event.edit(f"**القناة رقم {chs}**")
@@ -1345,12 +1345,12 @@ async def _(event):
     await event.edit("**جاري تجميع النقاط**")
     joinu = await iqthon(JoinChannelRequest('iqthon'))
     channel_entity = await iqthon.get_entity(bot_usernameeee)
-    await iqthon.send_message("@qweqwe1919bot" '/start')
+    await iqthon.send_message("@qweqwe1919bot" ,'/start')
     await asyncio.sleep(4)
-    msg0 = await iqthon.get_messages("@qweqwe1919bot" limit=1)
+    msg0 = await iqthon.get_messages("@qweqwe1919bot", limit=1)
     await msg0[0].click(2)
     await asyncio.sleep(4)
-    msg1 = await iqthon.get_messages("@qweqwe1919bot" limit=1)
+    msg1 = await iqthon.get_messages("@qweqwe1919bot", limit=1)
     await msg1[0].click(0)
 
     chs = 1
@@ -1371,12 +1371,12 @@ async def _(event):
             except:
                 bott = url.split('/')[-1]
                 await iqthon(ImportChatInviteRequest(bott))
-            msg2 = await iqthon.get_messages("@qweqwe1919bot" limit=1)
+            msg2 = await iqthon.get_messages("@qweqwe1919bot", limit=1)
             await msg2[0].click(text='تحقق')
             chs += 1
             await event.edit(f"**تم الانضمام في {chs} قناة**")
         except:
-            msg2 = await iqthon.get_messages("@qweqwe1919bot" limit=1)
+            msg2 = await iqthon.get_messages("@qweqwe1919bot", limit=1)
             await msg2[0].click(text='التالي')
             chs += 1
             await event.edit(f"**القناة رقم {chs}**")
@@ -1390,12 +1390,12 @@ async def _(event):
     await event.edit("**جاري تجميع النقاط**")
     joinu = await iqthon(JoinChannelRequest('iqthon'))
     channel_entity = await iqthon.get_entity(bot_usernameeee)
-    await iqthon.send_message(f"{tgmamotgar}" '/start')
+    await iqthon.send_message(f"{tgmamotgar}", '/start')
     await asyncio.sleep(4)
-    msg0 = await iqthon.get_messages(f"{tgmamotgar}" limit=1)
+    msg0 = await iqthon.get_messages(f"{tgmamotgar}" ,limit=1)
     await msg0[0].click(2)
     await asyncio.sleep(4)
-    msg1 = await iqthon.get_messages(f"{tgmamotgar}" limit=1)
+    msg1 = await iqthon.get_messages(f"{tgmamotgar}" ,limit=1)
     await msg1[0].click(0)
 
     chs = 1
@@ -1416,12 +1416,12 @@ async def _(event):
             except:
                 bott = url.split('/')[-1]
                 await iqthon(ImportChatInviteRequest(bott))
-            msg2 = await iqthon.get_messages(f"{tgmamotgar}" limit=1)
+            msg2 = await iqthon.get_messages(f"{tgmamotgar}" ,limit=1)
             await msg2[0].click(text='تحقق')
             chs += 1
             await event.edit(f"**تم الانضمام في {chs} قناة**")
         except:
-            msg2 = await iqthon.get_messages(f"{tgmamotgar}" limit=1)
+            msg2 = await iqthon.get_messages(f"{tgmamotgar}", limit=1)
             await msg2[0].click(text='التالي')
             chs += 1
             await event.edit(f"**القناة رقم {chs}**")
