@@ -1699,7 +1699,7 @@ async def itachi(event):
         args = get.text
     if not args:
         await edit_or_reply(
-            event, "**🝳︙ قم بكتابه الكلمه بجانب الامر **"
+            event, "**⁂︙ قم بكتابه الكلمه بجانب الامر **"
         )
         return
     result = ""
@@ -1719,7 +1719,7 @@ async def itachi(event):
         args = get.text
     if not args:
         return await edit_or_reply(
-            event, "**🝳︙ قم بكتابه الكلمه بجانب الامر **"
+            event, "**⁂︙ قم بكتابه الكلمه بجانب الامر **"
         )
     try:
         emoji, arg = args.split(" ", 1)
@@ -1741,26 +1741,26 @@ async def _(event):
     flag = event.pattern_match.group(1)
     start = datetime.now()
     if flag == " الاعلى":
-        catevent = await edit_or_reply(event, "**🝳︙ جاري قياس البنك  📶..**")
+        catevent = await edit_or_reply(event, "**⁂︙ جاري قياس البنك  📶..**")
         await asyncio.sleep(0.3)
-        await catevent.edit("**🝳︙ جاري قياس البنك  📶..**")
+        await catevent.edit("**⁂︙ جاري قياس البنك  📶..**")
         await asyncio.sleep(0.3)
-        await catevent.edit("**🝳︙ جاري قياس البنك  📶..**")
+        await catevent.edit("**⁂︙ جاري قياس البنك  📶..**")
         end = datetime.now()
         tms = (end - start).microseconds / 1000
         ms = round((tms - 0.6) / 3, 3)
-        await catevent.edit(f"**🝳︙ سرعه الاستجابة للبنك هيه  📶 :**  `{ms} بالثانية`  ")
+        await catevent.edit(f"**⁂︙ سرعه الاستجابة للبنك هيه  📶 :**  `{ms} بالثانية`  ")
     else:
         catevent = await edit_or_reply(event, "Pong!")
         end = datetime.now()
         ms = (end - start).microseconds / 1000
-        await catevent.edit(f"**🝳︙ سرعه الاستجابة للبنك هيه  📶 :**  `{ms} بالثانية`  ")
+        await catevent.edit(f"**⁂︙ سرعه الاستجابة للبنك هيه  📶 :**  `{ms} بالثانية`  ")
 @iqthon.on(admin_cmd(pattern="البنك(?:\s|$)([\s\S]*)"))  
 async def _(event):
     start = datetime.now()
     animation_interval = 0.3
     animation_ttl = range(26)
-    event = await edit_or_reply(event, "**🝳︙ جاري قياس البنك بتسليه 📶..**")
+    event = await edit_or_reply(event, "**⁂︙ جاري قياس البنك بتسليه 📶..**")
     animation_chars = [
         "⬛⬛⬛⬛⬛⬛⬛⬛⬛",
         "⬛⬛⬛⬛⬛⬛⬛⬛⬛ \n⬛‎📶‎📶‎📶‎📶‎📶‎📶‎📶⬛",
@@ -1804,15 +1804,15 @@ async def _(event):
         idd = reply_message.sender_id
         if idd == 1226408155:
             await edit_or_reply(
-                event, "**🝳︙ عـذرا أنـة مبـرمج السـورس لايـمكن تهكيـرة. ⚜️**"
+                event, "**⁂︙ عـذرا أنـة مبـرمج السـورس لايـمكن تهكيـرة. ⚜️**"
             )
         if idd == 2104331134:
             await edit_or_reply(
-                event, "**🝳︙ عـذرا أنـة مبـرمج السـورس لايـمكن تهكيـرة. ⚜️**"
+                event, "**⁂︙ عـذرا أنـة مبـرمج السـورس لايـمكن تهكيـرة. ⚜️**"
             )
         else:
-            event = await edit_or_reply(event, "**🝳︙ جـاري التـهكير ⚠️**")
-            animation_chars = [                "**🝳︙ جـاري الاتصـال بجهـاز الضحـية لأختـراقـة  📳**",                "**🝳︙ أختـراق جهـاز الضحـية الهـددف محـدد جـاري أختـراقـة ㊙️**",                "**🝳︙ تحـميل الاخـتراق  ㊙️ .. 0%**\n▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",                "**🝳︙ تحـميل الاخـتراق  ㊙️ .. 4%**\n█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",          "**🝳︙ تحـميل الاخـتراق  ㊙️ ..10%**\n██▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",                "**🝳︙ تحـميل الاخـتراق  ㊙️ .. 20%**\n█████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",                "**🝳︙ تحـميل الاخـتراق  ㊙️ .. 36%**\n█████████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",                "**🝳︙ تحـميل الاخـتراق  ㊙️ .. 52%**\n█████████████▒▒▒▒▒▒▒▒▒▒▒▒ `",                "**🝳︙ تحـميل الاخـتراق  ㊙️ .. 84%**\n█████████████████████▒▒▒▒ `",                "**🝳︙ تحـميل الاخـتراق  ㊙️ .. 100%**\n████████████████████████`",                f"**🝳︙ تـم اخـتراق الضحـية 🆘 بواسطه : `{ALIVE_NAME}` . بـدون تنـازل**",
+            event = await edit_or_reply(event, "**⁂︙ جـاري التـهكير ⚠️**")
+            animation_chars = [                "**⁂︙ جـاري الاتصـال بجهـاز الضحـية لأختـراقـة  📳**",                "**⁂︙ أختـراق جهـاز الضحـية الهـددف محـدد جـاري أختـراقـة ㊙️**",                "**⁂︙ تحـميل الاخـتراق  ㊙️ .. 0%**\n▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",                "**⁂︙ تحـميل الاخـتراق  ㊙️ .. 4%**\n█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",          "**⁂︙ تحـميل الاخـتراق  ㊙️ ..10%**\n██▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",                "**⁂︙ تحـميل الاخـتراق  ㊙️ .. 20%**\n█████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",                "**⁂︙ تحـميل الاخـتراق  ㊙️ .. 36%**\n█████████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",                "**⁂︙ تحـميل الاخـتراق  ㊙️ .. 52%**\n█████████████▒▒▒▒▒▒▒▒▒▒▒▒ `",                "**⁂︙ تحـميل الاخـتراق  ㊙️ .. 84%**\n█████████████████████▒▒▒▒ `",                "**⁂︙ تحـميل الاخـتراق  ㊙️ .. 100%**\n████████████████████████`",                f"**⁂︙ تـم اخـتراق الضحـية 🆘 بواسطه : `{ALIVE_NAME}` . بـدون تنـازل**",
             ]
             animation_interval = 3
             animation_ttl = range(11)
@@ -1820,7 +1820,7 @@ async def _(event):
                 await asyncio.sleep(animation_interval)
                 await event.edit(animation_chars[i % 11])
     else:
-        await edit_or_reply(            event,            "**🝳︙ لم يتم تعريف أي مستخدم قم برد على الضحية**",            parse_mode=_format.parse_pre,        )
+        await edit_or_reply(            event,            "**⁂︙ لم يتم تعريف أي مستخدم قم برد على الضحية**",            parse_mode=_format.parse_pre,        )
 @iqthon.on(admin_cmd(pattern="اذكار$"))
 async def ithker(knopis):
     await knopis.edit(choice(Citation_morning))    
@@ -2001,7 +2001,7 @@ async def figlet(event):
         cmd = None
         text = input_str
     else:
-        await edit_or_reply(event, "**🝳︙قم بإعطـاء نـص لتغييـره ␥**")
+        await edit_or_reply(event, "**⁂︙قم بإعطـاء نـص لتغييـره ␥**")
         return
     style = cmd
     text = text.strip()
@@ -2009,7 +2009,7 @@ async def figlet(event):
         try:
             font = CMD_FIG[style.strip()]
         except KeyError:
-            return await edit_delete(                event, "**🝳︙تم تحديـد نمـط غيـر صالـح ⚠️**"            )
+            return await edit_delete(                event, "**⁂︙تم تحديـد نمـط غيـر صالـح ⚠️**"            )
         result = pyfiglet.figlet_format(deEmojify(text), font=font)
     else:
         result = pyfiglet.figlet_format(deEmojify(text))
@@ -2025,7 +2025,7 @@ async def iq(mention):
         return await edit_or_reply(mention, f"**- هذا مبرمج السورس  **")
     iqth = user.first_name.replace("\u2060", "") if user.first_name else user.username
     iqt = random.choice(kno)
-    await edit_or_reply(mention, f"🝳︙ نـسـبتكم انـت و [{iqth}](tg://user?id={user.id}) هـي {iqt} 😔🖤")
+    await edit_or_reply(mention, f"⁂︙ نـسـبتكم انـت و [{iqth}](tg://user?id={user.id}) هـي {iqt} 😔🖤")
 @iqthon.on(admin_cmd(pattern="نسبه الانوثه(?:\s|$)([\s\S]*)"))
 async def iq(mention):
     user, custom = await get_user_from_event(mention)
@@ -2035,7 +2035,7 @@ async def iq(mention):
         return await edit_or_reply(mention, f"**- هذا مبرمج السورس  **")
     iqth = user.first_name.replace("\u2060", "") if user.first_name else user.username
     iqt = random.choice(arb)
-    await edit_or_reply(mention, f"🝳︙ نسبه الانوثه لـ [{iqth}](tg://user?id={user.id}) هـي {iqt} 🤰")
+    await edit_or_reply(mention, f"⁂︙ نسبه الانوثه لـ [{iqth}](tg://user?id={user.id}) هـي {iqt} 🤰")
 @iqthon.on(admin_cmd(pattern="نسبه الغباء(?:\s|$)([\s\S]*)"))
 async def permalink(mention):
     user, custom = await get_user_from_event(mention)
@@ -2045,7 +2045,7 @@ async def permalink(mention):
         return await edit_or_reply(mention, f"**- هذا مبرمج السورس  **")
     iqth = user.first_name.replace("\u2060", "") if user.first_name else user.username
     iqt = random.choice(arb)
-    await edit_or_reply(mention, f"🝳︙ نسبه الغباء لـ [{iqth}](tg://user?id={user.id}) هـي {iqt} 😂💔")
+    await edit_or_reply(mention, f"⁂︙ نسبه الغباء لـ [{iqth}](tg://user?id={user.id}) هـي {iqt} 😂💔")
 @iqthon.on(admin_cmd(pattern="نسبه الانحراف(?:\s|$)([\s\S]*)"))
 async def permalink(mention):
     user, custom = await get_user_from_event(mention)
@@ -2055,7 +2055,7 @@ async def permalink(mention):
         return await edit_or_reply(mention, f"**- هذا مبرمج السورس  **")
     iqth = user.first_name.replace("\u2060", "") if user.first_name else user.username
     iqt = random.choice(arb)
-    await edit_or_reply(mention, f"🝳︙ نسبة الانحراف لـ [{iqth}](tg://user?id={user.id}) هـي {iqt} 🥵🖤")
+    await edit_or_reply(mention, f"⁂︙ نسبة الانحراف لـ [{iqth}](tg://user?id={user.id}) هـي {iqt} 🥵🖤")
 @iqthon.on(admin_cmd(pattern="نسبه المثليه(?:\s|$)([\s\S]*)"))
 async def permalink(mention):
     user, custom = await get_user_from_event(mention)
@@ -2065,7 +2065,7 @@ async def permalink(mention):
         return await edit_or_reply(mention, f"**- هذا مبرمج السورس  **")
     iqth = user.first_name.replace("\u2060", "") if user.first_name else user.username
     iqt = random.choice(arb)
-    await edit_or_reply(mention, f"🝳︙ نسبه المثليه لـ [{iqth}](tg://user?id={user.id}) هـي {iqt} 🤡 🏳️‍🌈.")
+    await edit_or_reply(mention, f"⁂︙ نسبه المثليه لـ [{iqth}](tg://user?id={user.id}) هـي {iqt} 🤡 🏳️‍🌈.")
 @iqthon.on(admin_cmd(pattern="نسبه النجاح(?:\s|$)([\s\S]*)"))
 async def permalink(mention):
     user, custom = await get_user_from_event(mention)
@@ -2073,7 +2073,7 @@ async def permalink(mention):
         return
     iqth = user.first_name.replace("\u2060", "") if user.first_name else user.username
     iqt = random.choice(arb)
-    await edit_or_reply(mention, f"🝳︙ نسبه النجاح لـ [{iqth}](tg://user?id={user.id}) هـي {iqt} 🤓.") 
+    await edit_or_reply(mention, f"⁂︙ نسبه النجاح لـ [{iqth}](tg://user?id={user.id}) هـي {iqt} 🤓.") 
 @iqthon.on(admin_cmd(pattern="نسبه الكراهيه(?:\s|$)([\s\S]*)"))
 async def permalink(mention):
     user, custom = await get_user_from_event(mention)
@@ -2083,7 +2083,7 @@ async def permalink(mention):
         return await edit_or_reply(mention, f"**- هذا مبرمج السورس  **")
     iqth = user.first_name.replace("\u2060", "") if user.first_name else user.username
     iqt = random.choice(arb)
-    await edit_or_reply(mention, f"🝳︙ نسبه الكراهيه لـ [{iqth}](tg://user?id={user.id}) هـي {iqt} 🤮.")
+    await edit_or_reply(mention, f"⁂︙ نسبه الكراهيه لـ [{iqth}](tg://user?id={user.id}) هـي {iqt} 🤮.")
 async def get_user(event):
     if event.reply_to_msg_id:
         previous_message = await event.get_reply_message()
@@ -2172,7 +2172,7 @@ async def iq(mention):
     me = await mention.client.get_me()
     my_first = me.first_name
     my_mention = f"[{me.first_name}](tg://user?id={me.id})"
-    await edit_or_reply(mention, f"**🚹 ¦ المستخدم ⪼ • ** [{iqth2}](tg://user?id={user.id}) \n ☑️ **¦ تم رفعه كحبه صاكه 🤑👙.** \n**🤵‍♂️ ¦ بواسطه  :** {my_mention} ")
+    await edit_or_reply(mention, f"**⁂ ¦ المستخدم ⪼ • ** [{iqth2}](tg://user?id={user.id}) \n ☑️ **¦ تم رفعه كحبه صاكه 🤑👙.** \n**🤵‍♂️ ¦ بواسطه  :** {my_mention} ")
 @iqthon.on(admin_cmd(pattern="رفع مطي(?:\s|$)([\s\S]*)"))
 async def iq(mention):
     user, custom = await get_user_from_event(mention)
@@ -2184,7 +2184,7 @@ async def iq(mention):
     me = await mention.client.get_me()
     my_first = me.first_name
     my_mention = f"[{me.first_name}](tg://user?id={me.id})"
-    await edit_or_reply(mention, f"**🚹 ¦ المستخدم ⪼ • ** [{iqth2}](tg://user?id={user.id}) \n ☑️ **¦ تم رفعه مطي سبورتي 🐴.** \n**🤵‍♂️ ¦ بواسطه  :** {my_mention} ")
+    await edit_or_reply(mention, f"**⁂ ¦ المستخدم ⪼ • ** [{iqth2}](tg://user?id={user.id}) \n ☑️ **¦ تم رفعه مطي سبورتي 🐴.** \n**🤵‍♂️ ¦ بواسطه  :** {my_mention} ")
 @iqthon.on(admin_cmd(pattern="رفع زباله(?:\s|$)([\s\S]*)"))
 async def iq(mention):
     user, custom = await get_user_from_event(mention)
@@ -2196,7 +2196,7 @@ async def iq(mention):
     me = await mention.client.get_me()
     my_first = me.first_name
     my_mention = f"[{me.first_name}](tg://user?id={me.id})"
-    await edit_or_reply(mention, f"**🚹 ¦ المستخدم ⪼ • ** [{iqth2}](tg://user?id={user.id}) \n ☑️ **¦ تم رفعه زباله معفنه 🗑.** \n**🤵‍♂️ ¦ بواسطه  :** {my_mention} ")
+    await edit_or_reply(mention, f"**⁂ ¦ المستخدم ⪼ • ** [{iqth2}](tg://user?id={user.id}) \n ☑️ **¦ تم رفعه زباله معفنه 🗑.** \n**🤵‍♂️ ¦ بواسطه  :** {my_mention} ")
 @iqthon.on(admin_cmd(pattern="رفع منشئ(?:\s|$)([\s\S]*)"))
 async def iq(mention):
     user, custom = await get_user_from_event(mention)
@@ -2208,7 +2208,7 @@ async def iq(mention):
     me = await mention.client.get_me()
     my_first = me.first_name
     my_mention = f"[{me.first_name}](tg://user?id={me.id})"
-    await edit_or_reply(mention, f"**🚹 ¦ المستخدم ⪼ • ** [{iqth2}](tg://user?id={user.id}) \n ☑️ **¦ تم رفعه منشئ الكروب 👷‍♂️.** \n**🤵‍♂️ ¦ بواسطه  :** {my_mention} ")
+    await edit_or_reply(mention, f"**⁂ ¦ المستخدم ⪼ • ** [{iqth2}](tg://user?id={user.id}) \n ☑️ **¦ تم رفعه منشئ الكروب 👷‍♂️.** \n**🤵‍♂️ ¦ بواسطه  :** {my_mention} ")
 @iqthon.on(admin_cmd(pattern="رفع مدير(?:\s|$)([\s\S]*)"))
 async def iq(mention):
     user, custom = await get_user_from_event(mention)
@@ -2218,7 +2218,7 @@ async def iq(mention):
     me = await mention.client.get_me()
     my_first = me.first_name
     my_mention = f"[{me.first_name}](tg://user?id={me.id})"
-    await edit_or_reply(mention, f"**🚹 ¦ المستخدم ⪼ • ** [{iqth2}](tg://user?id={user.id}) \n ☑️ **¦ تم رفعه مدير الكروب 🤵‍♂️.** \n**🤵‍♂️ ¦ بواسطه  :** {my_mention} ")
+    await edit_or_reply(mention, f"**⁂ ¦ المستخدم ⪼ • ** [{iqth2}](tg://user?id={user.id}) \n ☑️ **¦ تم رفعه مدير الكروب 🤵‍♂️.** \n**🤵‍♂️ ¦ بواسطه  :** {my_mention} ")
 @iqthon.on(admin_cmd(pattern="رفع مطور(?:\s|$)([\s\S]*)"))
 async def iq(mention):
     user, custom = await get_user_from_event(mention)
@@ -2228,7 +2228,7 @@ async def iq(mention):
     me = await mention.client.get_me()
     my_first = me.first_name
     my_mention = f"[{me.first_name}](tg://user?id={me.id})"
-    await edit_or_reply(mention, f"**🚹 ¦ المستخدم ⪼ • ** [{iqth2}](tg://user?id={user.id}) \n ☑️ **¦ تم رفعه مطور الكروب 🦾.** \n**🤵‍♂️ ¦ بواسطه  :** {my_mention} ")
+    await edit_or_reply(mention, f"**⁂ ¦ المستخدم ⪼ • ** [{iqth2}](tg://user?id={user.id}) \n ☑️ **¦ تم رفعه مطور الكروب 🦾.** \n**🤵‍♂️ ¦ بواسطه  :** {my_mention} ")
 @iqthon.on(admin_cmd(pattern="رفع كواد(?:\s|$)([\s\S]*)"))
 async def iq(mention):
     user, custom = await get_user_from_event(mention)
@@ -2240,7 +2240,7 @@ async def iq(mention):
     me = await mention.client.get_me()
     my_first = me.first_name
     my_mention = f"[{me.first_name}](tg://user?id={me.id})"
-    await edit_or_reply(mention, f"**🚹 ¦ المستخدم ⪼ • ** [{iqth2}](tg://user?id={user.id}) \n ☑️ **¦  تم رفعه كواد ينيج 🍌. ** \n**🤵‍♂️ ¦ بواسطه  :** {my_mention} ")
+    await edit_or_reply(mention, f"**⁂ ¦ المستخدم ⪼ • ** [{iqth2}](tg://user?id={user.id}) \n ☑️ **¦  تم رفعه كواد ينيج 🍌. ** \n**🤵‍♂️ ¦ بواسطه  :** {my_mention} ")
 @iqthon.on(admin_cmd(pattern="رفع مرتبط(?:\s|$)([\s\S]*)"))
 async def iq(mention):
     user, custom = await get_user_from_event(mention)
@@ -2252,7 +2252,7 @@ async def iq(mention):
     me = await mention.client.get_me()
     my_first = me.first_name
     my_mention = f"[{me.first_name}](tg://user?id={me.id})"
-    await edit_or_reply(mention, f"**🚹 ¦ المستخدم ⪼ • ** [{iqth2}](tg://user?id={user.id}) \n ☑️ **¦ تم رفعه مرتبط  👩‍❤️‍💋‍👨. .** \n**🤵‍♂️ ¦ بواسطه  :** {my_mention} ")
+    await edit_or_reply(mention, f"**⁂ ¦ المستخدم ⪼ • ** [{iqth2}](tg://user?id={user.id}) \n ☑️ **¦ تم رفعه مرتبط  👩‍❤️‍💋‍👨. .** \n**🤵‍♂️ ¦ بواسطه  :** {my_mention} ")
 @iqthon.on(admin_cmd(pattern="رفع مثلي(?:\s|$)([\s\S]*)"))
 async def iq(mention):
     user, custom = await get_user_from_event(mention)
@@ -2264,7 +2264,7 @@ async def iq(mention):
     me = await mention.client.get_me()
     my_first = me.first_name
     my_mention = f"[{me.first_name}](tg://user?id={me.id})"
-    await edit_or_reply(mention, f"**🚹 ¦ المستخدم ⪼ • ** [{iqth2}](tg://user?id={user.id}) \n ☑️ **¦ تم رفعه مثلي 👨‍❤️‍💋‍👨 🏳️‍.** \n**🤵‍♂️ ¦ بواسطه  :** {my_mention} ")
+    await edit_or_reply(mention, f"**⁂ ¦ المستخدم ⪼ • ** [{iqth2}](tg://user?id={user.id}) \n ☑️ **¦ تم رفعه مثلي 👨‍❤️‍💋‍👨 🏳️‍.** \n**🤵‍♂️ ¦ بواسطه  :** {my_mention} ")
 @iqthon.on(admin_cmd(pattern="رفع زوجتي(?:\s|$)([\s\S]*)"))
 async def iq(mention):
     user, custom = await get_user_from_event(mention)
@@ -2276,7 +2276,7 @@ async def iq(mention):
     me = await mention.client.get_me()
     my_first = me.first_name
     my_mention = f"[{me.first_name}](tg://user?id={me.id})"
-    await edit_or_reply(mention, f"**🚹 ¦ المستخدم ⪼ • ** [{iqth2}](tg://user?id={user.id}) \n ☑️ **¦ تم رفعها زوجتك  👰🏼‍♀️.** \n**🤵‍♂️ ¦ بواسطه  :** {my_mention} ")
+    await edit_or_reply(mention, f"**⁂ ¦ المستخدم ⪼ • ** [{iqth2}](tg://user?id={user.id}) \n ☑️ **¦ تم رفعها زوجتك  👰🏼‍♀️.** \n**🤵‍♂️ ¦ بواسطه  :** {my_mention} ")
 @iqthon.on(admin_cmd(pattern="رفع صاك(?:\s|$)([\s\S]*)"))
 async def iq(mention):
     user, custom = await get_user_from_event(mention)
@@ -2286,7 +2286,7 @@ async def iq(mention):
     me = await mention.client.get_me()
     my_first = me.first_name
     my_mention = f"[{me.first_name}](tg://user?id={me.id})"
-    await edit_or_reply(mention, f"**🚹 ¦ المستخدم ⪼ • ** [{iqth2}](tg://user?id={user.id}) \n ☑️ **¦  تم رفعه صاك 🤴 .** \n**🤵‍♂️ ¦ بواسطه  : ** {my_mention} ")
+    await edit_or_reply(mention, f"**⁂ ¦ المستخدم ⪼ • ** [{iqth2}](tg://user?id={user.id}) \n ☑️ **¦  تم رفعه صاك 🤴 .** \n**🤵‍♂️ ¦ بواسطه  : ** {my_mention} ")
 @iqthon.on(admin_cmd(outgoing=True, pattern=r"^\.لوقو(?: |$)(.*)"))
 async def _(event):
     aing = await event.client.get_me()
@@ -2328,7 +2328,7 @@ async def iq(mention):
     me = await mention.client.get_me()
     my_first = me.first_name
     my_mention = f"[{me.first_name}](tg://user?id={me.id})"
-    await edit_or_reply(mention, f"**🚹 ¦ المستخدم ⪼ • ** [{iqth2}](tg://user?id={user.id}) \n ☑️ **¦  تم رفعها صاكه 👸🏼.** \n**🤵‍♂️ ¦ بواسطه  : ** {my_mention} ")
+    await edit_or_reply(mention, f"**⁂ ¦ المستخدم ⪼ • ** [{iqth2}](tg://user?id={user.id}) \n ☑️ **¦  تم رفعها صاكه 👸🏼.** \n**🤵‍♂️ ¦ بواسطه  : ** {my_mention} ")
 kettuet = [  
   "اكثر شي ينرفزك ؟",
   "اخر مكان رحتله ؟",
@@ -2477,7 +2477,7 @@ kettuet = [
 @iqthon.on(admin_cmd(pattern="كت(?: |$)(.*)"))
 async def permalink(mention):
     iqt = random.choice(kettuet)
-    await edit_or_reply(mention, f"**🝳︙ {iqt} **")
+    await edit_or_reply(mention, f"**⁂︙ {iqt} **")
 @iqthon.on(admin_cmd(pattern="هينه(?:\s|$)([\s\S]*)"))
 async def permalink(mention):
     user, custom = await get_user_from_event(mention)
@@ -2557,7 +2557,7 @@ async def iq(mention):
     my_first = me.first_name
     iqth = user.first_name.replace("\u2060", "") if user.first_name else user.username
     my_mention = f"[{me.first_name}](tg://user?id={me.id})"
-    await edit_or_reply(mention, f"** ⣠⡶⠚⠛⠲⢄⡀\n⣼⠁      ⠀⠀⠀⠳⢤⣄\n⢿⠀⢧⡀⠀⠀⠀⠀⠀⢈⡇\n⠈⠳⣼⡙⠒⠶⠶⠖⠚⠉⠳⣄\n⠀⠀⠈⣇⠀⠀⠀⠀⠀⠀⠀⠈⠳⣄\n⠀⠀⠀⠘⣆       ⠀⠀⠀⠀⠀⠈⠓⢦⣀\n⠀⠀⠀⠀⠈⢳⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⠲⢤\n⠀⠀⠀⠀⠀⠀⠙⢦⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢧\n⠀⠀⠀⠀⠀⠀⠀    ⠓⠦⠀⠀⠀⠀**\n**🚹 ¦ تعال مصه عزيزي ** [{iqth}{iqth2}](tg://user?id={user.id}) ")
+    await edit_or_reply(mention, f"** ⣠⡶⠚⠛⠲⢄⡀\n⣼⠁      ⠀⠀⠀⠳⢤⣄\n⢿⠀⢧⡀⠀⠀⠀⠀⠀⢈⡇\n⠈⠳⣼⡙⠒⠶⠶⠖⠚⠉⠳⣄\n⠀⠀⠈⣇⠀⠀⠀⠀⠀⠀⠀⠈⠳⣄\n⠀⠀⠀⠘⣆       ⠀⠀⠀⠀⠀⠈⠓⢦⣀\n⠀⠀⠀⠀⠈⢳⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⠲⢤\n⠀⠀⠀⠀⠀⠀⠙⢦⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢧\n⠀⠀⠀⠀⠀⠀⠀    ⠓⠦⠀⠀⠀⠀**\n**⁂ ¦ تعال مصه عزيزي ** [{iqth}{iqth2}](tg://user?id={user.id}) ")
 @iqthon.on(admin_cmd(pattern="اركضلي(?: |$)(.*)"))
 async def _(event):
     catevent = await edit_or_reply(event, "**اركضلي يابه**")
@@ -2703,7 +2703,7 @@ async def permalink(mention):
         return await edit_or_reply(mention, f"**- هذا مبرمج السورس  **")
     iqth = user.first_name.replace("\u2060", "") if user.first_name else user.username
     iqth2 = user.last_name.replace("\u2060", "") if user.last_name else user.username
-    await edit_or_reply(mention, f"────▄▀▀▀▀▀▀▀▀▀▀▀▀▀▀█─█\n▀▀▀▀▄─█─█─█─█─█─█──█▀█\n─────▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀─▀\n\n**🚹 ¦ تنح خل اجكك عزيزي ** [{iqth}{iqth2}](tg://user?id={user.id})")
+    await edit_or_reply(mention, f"────▄▀▀▀▀▀▀▀▀▀▀▀▀▀▀█─█\n▀▀▀▀▄─█─█─█─█─█─█──█▀█\n─────▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀─▀\n\n**⁂ ¦ تنح خل اجكك عزيزي ** [{iqth}{iqth2}](tg://user?id={user.id})")
 @iqthon.on(admin_cmd(outgoing=True, pattern=r"^\.فيديو2$"))
 async def _(event):
     try:
@@ -2757,7 +2757,7 @@ async def iq(mention):
     me = await mention.client.get_me()
     my_first = me.first_name
     my_mention = f"[{me.first_name}](tg://user?id={me.id})"
-    await edit_or_reply(mention, f"**🚹 ¦ المستخدم ⪼ • ** [{iqth2}](tg://user?id={user.id}) \n ☑️ **¦  تـم رفعـة شيـخ المجـموعة 👳‍♂️ (56) .** \n**🤵‍♂️ ¦ بواسطه  : ** {my_mention} ")
+    await edit_or_reply(mention, f"**⁂ ¦ المستخدم ⪼ • ** [{iqth2}](tg://user?id={user.id}) \n ☑️ **¦  تـم رفعـة شيـخ المجـموعة 👳‍♂️ (56) .** \n**🤵‍♂️ ¦ بواسطه  : ** {my_mention} ")
 @iqthon.on(admin_cmd(pattern="رفع فرخ(?:\s|$)([\s\S]*)"))
 async def iq(mention):
     user, custom = await get_user_from_event(mention)
@@ -2767,7 +2767,7 @@ async def iq(mention):
     me = await mention.client.get_me()
     my_first = me.first_name
     my_mention = f"[{me.first_name}](tg://user?id={me.id})"
-    await edit_or_reply(mention, f"**🚹 ¦ المستخدم ⪼ • ** [{iqth2}](tg://user?id={user.id}) \n ☑️ **¦  تـم رفـعة فـرخ الكـروب 🐣 .** \n**🤵‍♂️ ¦ بواسطه  : ** {my_mention} ")
+    await edit_or_reply(mention, f"**⁂ ¦ المستخدم ⪼ • ** [{iqth2}](tg://user?id={user.id}) \n ☑️ **¦  تـم رفـعة فـرخ الكـروب 🐣 .** \n**🤵‍♂️ ¦ بواسطه  : ** {my_mention} ")
 @iqthon.on(admin_cmd(pattern="رفع تاج(?:\s|$)([\s\S]*)"))
 async def iq(mention):
     user, custom = await get_user_from_event(mention)
@@ -2777,7 +2777,7 @@ async def iq(mention):
     me = await mention.client.get_me()
     my_first = me.first_name
     my_mention = f"[{me.first_name}](tg://user?id={me.id})"
-    await edit_or_reply(mention, f"**🚹 ¦ المستخدم ⪼ • ** [{iqth2}](tg://user?id={user.id}) \n ☑️ **¦  تـم رفـع تـاج راسـك 🔱 .** \n**🤵‍♂️ ¦ بواسطه  : ** {my_mention} ")
+    await edit_or_reply(mention, f"**⁂ ¦ المستخدم ⪼ • ** [{iqth2}](tg://user?id={user.id}) \n ☑️ **¦  تـم رفـع تـاج راسـك 🔱 .** \n**🤵‍♂️ ¦ بواسطه  : ** {my_mention} ")
 @iqthon.on(admin_cmd(pattern="رفع مكبسل(?:\s|$)([\s\S]*)"))
 async def iq(mention):
     user, custom = await get_user_from_event(mention)
@@ -2787,7 +2787,7 @@ async def iq(mention):
     me = await mention.client.get_me()
     my_first = me.first_name
     my_mention = f"[{me.first_name}](tg://user?id={me.id})"
-    await edit_or_reply(mention, f"**🚹 ¦ المستخدم ⪼ • ** [{iqth2}](tg://user?id={user.id}) \n ☑️ **¦  تـم رفـعه مكبـسل 💊💉 .** \n**🤵‍♂️ ¦ بواسطه  : ** {my_mention} ")
+    await edit_or_reply(mention, f"**⁂ ¦ المستخدم ⪼ • ** [{iqth2}](tg://user?id={user.id}) \n ☑️ **¦  تـم رفـعه مكبـسل 💊💉 .** \n**🤵‍♂️ ¦ بواسطه  : ** {my_mention} ")
 @iqthon.on(admin_cmd(pattern="رفع غبي(?:\s|$)([\s\S]*)"))
 async def iq(mention):
     user, custom = await get_user_from_event(mention)
@@ -2797,7 +2797,7 @@ async def iq(mention):
     me = await mention.client.get_me()
     my_first = me.first_name
     my_mention = f"[{me.first_name}](tg://user?id={me.id})"
-    await edit_or_reply(mention, f"**🚹 ¦ المستخدم ⪼ • ** [{iqth2}](tg://user?id={user.id}) \n ☑️ **¦  تـم رفـعه غـبي 🛏️ .** \n**🤵‍♂️ ¦ بواسطه  : ** {my_mention} ")
+    await edit_or_reply(mention, f"**⁂ ¦ المستخدم ⪼ • ** [{iqth2}](tg://user?id={user.id}) \n ☑️ **¦  تـم رفـعه غـبي 🛏️ .** \n**🤵‍♂️ ¦ بواسطه  : ** {my_mention} ")
 @iqthon.on(admin_cmd(pattern="رفع سعلوه(?:\s|$)([\s\S]*)"))
 async def iq(mention):
     user, custom = await get_user_from_event(mention)
@@ -2807,4 +2807,4 @@ async def iq(mention):
     me = await mention.client.get_me()
     my_first = me.first_name
     my_mention = f"[{me.first_name}](tg://user?id={me.id})"
-    await edit_or_reply(mention, f"**🚹 ¦ المستخدم ⪼ • ** [{iqth2}](tg://user?id={user.id}) \n ☑️ **¦  تـم رفـعه سعـلوه 🦎 .** \n**🤵‍♂️ ¦ بواسطه  : ** {my_mention} ")
+    await edit_or_reply(mention, f"**⁂ ¦ المستخدم ⪼ • ** [{iqth2}](tg://user?id={user.id}) \n ☑️ **¦  تـم رفـعه سعـلوه 🦎 .** \n**🤵‍♂️ ¦ بواسطه  : ** {my_mention} ")
