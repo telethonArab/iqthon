@@ -1890,7 +1890,7 @@ if Config.TG_BOT_USERNAME is not None and tgbot is not None:
         
         if query.startswith("اوردر(?: |$)(.*)") and iqthon.query.user_id == bot.uid:
             try:
-                buttons = [[Button.inline("اوامر السورس", data="orderS1"), Button.inline("اوامر الحساب", data="ord1hs"),],[Button.inline("اوامر الكروب", data="ord1G"), Button.inline("اوامر الالعاب", data="play1"),],[Button.inline("اوامر الصيغ", data="shag1"), Button.inline("اوامر الاغاني", data="ordSONG"),], [Button.inline("اسم وقتي", data="order13"), Button.inline("اوامر السوبرات", data="ordahln1"),],[Button.inline("اوامر التسليه", data="order14") , Button.inline("الفارات", data="ordvars"),],[Button.inline("اوامر البصمات", data="order16") , Button.inline("اوامر التكرار", data="order17"),],[Button.inline("اوامر الزخرفة", data="order18") , Button.inline("اوامر الوسائط", data="order19"),]]
+                buttons = [[Button.inline("اوامر السورس", data="orderS1"), Button.inline("اوامر الحساب", data="ord1hs"),],[Button.inline("اوامر الكروب", data="ord1G"), Button.inline("اوامر الالعاب", data="play1"),],[Button.inline("اوامر الصيغ", data="shag1"), Button.inline("اوامر الاغاني", data="ordSONG"),], [Button.inline("اسم وقتي", data="order13"), Button.inline("اوامر السوبرات", data="ordahln1"),],[Button.inline("اوامر التسليه", data="order14") , Button.inline("الفارات", data="ordvars"),],[Button.inline("اوامر البصمات", data="order16") , Button.inline("اوامر التكرار", data="order17"),],[Button.inline("اوامر الزخرفة", data="order18") , Button.inline("اوامر الوسائط", data="order19"),,],[Button.inline("اوامر الملصقات", data="order20") , Button.inline("اوامر الصيد", data="order21"),],[Button.inline("اوامر المكالمات", data="order22"),]]
                 result = builder.article(title="iqthon",text=help2,buttons=buttons,link_preview=False)
                 await iqthon.answer([result] if result else None)
             except BotInlineDisabledError: 
@@ -1902,9 +1902,80 @@ if Config.TG_BOT_USERNAME is not None and tgbot is not None:
 @check_owner
 async def inlineiqthon(iqthon):
     text = "**⁂︙ قـائمـه الاوامـر :**\n**⁂︙ قنـاه السـورس :** @IQTHON\n**⁂︙ شـرح اوامـر السـورس : @L3LL3**\n**⁂︙ شـرح فـارات السـورس : @TEAMTELETHON** "
-    buttons = [[Button.inline("اوامر السورس", data="orderS1"), Button.inline("اوامر الحساب", data="ord1hs"),],[Button.inline("اوامر الكروب", data="ord1G"), Button.inline("اوامر الالعاب", data="play1"),],[Button.inline("اوامر الصيغ", data="shag1"), Button.inline("اوامر الاغاني", data="ordSONG"),], [Button.inline("اسم وقتي", data="order13"), Button.inline("اوامر السوبرات", data="ordahln1"),],[Button.inline("اوامر التسليه", data="order14") , Button.inline("الفارات", data="ordvars"),],[Button.inline("اوامر البصمات", data="order16") , Button.inline("اوامر التكرار", data="order17"),],[Button.inline("اوامر الزخرفة", data="order18") , Button.inline("اوامر الوسائط", data="order19"),]]
+    buttons = [[Button.inline("اوامر السورس", data="orderS1"), Button.inline("اوامر الحساب", data="ord1hs"),],[Button.inline("اوامر الكروب", data="ord1G"), Button.inline("اوامر الالعاب", data="play1"),],[Button.inline("اوامر الصيغ", data="shag1"), Button.inline("اوامر الاغاني", data="ordSONG"),], [Button.inline("اسم وقتي", data="order13"), Button.inline("اوامر السوبرات", data="ordahln1"),],[Button.inline("اوامر التسليه", data="order14") , Button.inline("الفارات", data="ordvars"),],[Button.inline("اوامر البصمات", data="order16") , Button.inline("اوامر التكرار", data="order17"),],[Button.inline("اوامر الزخرفة", data="order18") , Button.inline("اوامر الوسائط", data="order19"),],[Button.inline("اوامر الملصقات", data="order20") , Button.inline("اوامر الصيد", data="order21"),],[Button.inline("اوامر المكالمات", data="order22"),]]
     await iqthon.edit(text, buttons=buttons)
 
+
+@iqthon.tgbot.on(CallbackQuery(data=re.compile(rb"order22")))
+@check_owner
+async def inlineiqthon(iqthon):
+    text = """** ⦑   اوامر المكالمات   ⦒  : **
+( اوامر للمكالمات ) : 
+———————⁂———————
+الأمر ( .تشغيل صوتي + الرد على الصوت )
+• لتشغيل اغنية في المكالمة .
+———————⁂———————
+الأمر ( .تشغيل فيديو + الرد على الفيديو )
+• لتشغيل فيديو في المكالمة
+———————⁂———————
+الأمر ( .اغلاق البث )
+• لاغلاق الفيديو او الاغنية التي في المكالمة .  """
+
+    buttons = [[Button.inline("رجوع", data="orders"),]]
+    await iqthon.edit(text, buttons=buttons)  
+
+
+
+@iqthon.tgbot.on(CallbackQuery(data=re.compile(rb"order20")))
+@check_owner
+async def inlineiqthon(iqthon):
+    text = """** ⦑   اوامر الملصقات   ⦒  : **
+———————⁂———————
+ ⑴ ⦙ .جلب الملصقات + الرد على الملصق
+⁂  : يجلب اليك ملصقات الحزمه
+———————⁂———————
+⑵ ⦙  .انشاء حزمه ملصقات + الرد على الملصق
+⁂  : يضع الملصق بحزمه بشكل مقصوص
+———————⁂———————
+⑶ ⦙ .جلب معلومات الملصق + الرد على الملصق )
+⁂  : يجلب لك جميع معلومات الملصق
+———————⁂———————
+⑷ ⦙ .ملصق + اسم الحزمه او الملصق
+⁂  : يبحث عن اسم الحزمه او الملصق ويجلبه اليك
+———————⁂———————
+  ⦑   شرح اوامر الملصقات هنا  :  https://t.me/L3LL3/4720  ⦒
+"""
+
+    buttons = [[Button.inline("رجوع", data="orders"),]]
+    await iqthon.edit(text, buttons=buttons)  
+
+
+@iqthon.tgbot.on(CallbackQuery(data=re.compile(rb"order21")))
+@check_owner
+async def inlineiqthon(iqthon):
+    text = """**⦑   اوامر الصيد   ⦒  :
+———————⁂———————
+ الأمر  ⦙ ( .صيد + النوع )
+النوع : ( ثلاثيات - سداسي حرفين - خماسي - سداسيات - سباعيات - بوتات )
+———————⁂———————
+ أمر ⦙ ( .حالة الصيد )
+لمعرفة عدد محاولات الصيد بكل الأنواع
+———————⁂———————
+أمر ⦙ ( .اغلاق الصيد )
+لأيقاف جميع انواع الصيد
+———————⁂———————
+أمر ⦙ ( .سحب + اليوزر )
+عندما ينفك اليوزر تلقائيا يصيدة حسابك ويخلية في قناة
+———————⁂———————
+أمر ⦙ ( .اغلاق سحب + اليوزر )
+يلغي عملية سحب من اليوزر المحد
+———————⁂———————**
+CH : @IQTHON
+⁂︙ يوجد شرح مفصل عن الامر هنا : https://t.me/L3LL3/4832
+"""
+
+    buttons = [[Button.inline("رجوع", data="orders"),]]
+    await iqthon.edit(text, buttons=buttons)  
   
 @iqthon.tgbot.on(CallbackQuery(data=re.compile(rb"order18")))
 @check_owner
