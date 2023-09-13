@@ -49,6 +49,26 @@ from IqArab import StartTime
 from IqArab import iqthon
 from ..Config import Config
 from ..core.logger import logging
+from telethon.tl import functions, types
+from telethon.tl.functions.messages import ImportChatInviteRequest as Get
+from telethon.utils import get_display_name
+from telethon.tl.functions.channels import JoinChannelRequest
+from telethon.errors import FloodWaitError
+from telethon import TelegramClient, events
+from collections import deque
+from telethon import functions
+from telethon.errors.rpcerrorlist import (
+    UserAlreadyParticipantError,
+    UserNotMutualContactError,
+    UserPrivacyRestrictedError,
+)
+from telethon.tl.functions.channels import InviteToChannelRequest
+from telethon.tl.types import InputPeerUser
+from telethon.errors.rpcerrorlist import YouBlockedUserError
+from telethon.tl import functions
+from telethon.tl.functions.channels import LeaveChannelRequest
+from telethon.tl.functions.messages import GetHistoryRequest
+from telethon.tl.functions.messages import ImportChatInviteRequest
 from ..core.managers import edit_delete, edit_or_reply
 from ..helpers.functions import catalive, check_data_base_heal_th, get_readable_time
 from ..helpers.utils import reply_id, _catutils, parse_pre, yaml_format, install_pip, get_user_from_event, _format
@@ -1146,9 +1166,268 @@ async def iq(event):
 """)
 
 
+@iqthon.on(events.NewMessage(outgoing=True, pattern=".تجميع المليار"))
+async def _(event):
+
+    await event.edit("**جاري تجميع النقاط**")
+    joinu = await iqthon(JoinChannelRequest('iqthon'))
+    channel_entity = await iqthon.get_entity(bot_username)
+    await iqthon.send_message("@EEObot" '/start')
+    await asyncio.sleep(4)
+    msg0 = await iqthon.get_messages("@EEObot" limit=1)
+    await msg0[0].click(2)
+    await asyncio.sleep(4)
+    msg1 = await iqthon.get_messages("@EEObot" limit=1)
+    await msg1[0].click(0)
+
+    chs = 1
+    for i in range(100):
+        await asyncio.sleep(4)
+
+        list = await iqthon(GetHistoryRequest(peer=channel_entity, limit=1,
+                                               offset_date=None, offset_id=0, max_id=0, min_id=0, add_offset=0, hash=0))
+        msgs = list.messages[0]
+        if msgs.message.find('لا يوجد قنوات في الوقت الحالي , قم يتجميع النقاط بطريقه مختلفه') != -1:
+            await iqthon.send_message(event.chat_id, f"**تم الانتهاء من التجميع**")
+
+            break
+        url = msgs.reply_markup.rows[0].buttons[0].url
+        try:
+            try:
+                await iqthon(JoinChannelRequest(url))
+            except:
+                bott = url.split('/')[-1]
+                await iqthon(ImportChatInviteRequest(bott))
+            msg2 = await iqthon.get_messages("@EEObot" limit=1)
+            await msg2[0].click(text='تحقق')
+            chs += 1
+            await event.edit(f"**تم الانضمام في {chs} قناة**")
+        except:
+            msg2 = await iqthon.get_messages("@EEObot" limit=1)
+            await msg2[0].click(text='التالي')
+            chs += 1
+            await event.edit(f"**القناة رقم {chs}**")
+    await iqthon.send_message(event.chat_id, "**تم الانتهاء من التجميع**")
+
+@iqthon.on(events.NewMessage(outgoing=True, pattern=".تجميع الجوكر"))
+async def _(event):
+
+    await event.edit("**جاري تجميع النقاط**")
+    joinu = await iqthon(JoinChannelRequest('iqthon'))
+    channel_entity = await iqthon.get_entity(bot_usernamee)
+    await iqthon.send_message("@A_MAN9300BOT" '/start')
+    await asyncio.sleep(4)
+    msg0 = await iqthon.get_messages("@A_MAN9300BOT" limit=1)
+    await msg0[0].click(2)
+    await asyncio.sleep(4)
+    msg1 = await iqthon.get_messages("@A_MAN9300BOT" limit=1)
+    await msg1[0].click(0)
+
+    chs = 1
+    for i in range(100):
+        await asyncio.sleep(4)
+
+        list = await iqthon(GetHistoryRequest(peer=channel_entity, limit=1,
+                                               offset_date=None, offset_id=0, max_id=0, min_id=0, add_offset=0, hash=0))
+        msgs = list.messages[0]
+        if msgs.message.find('لا يوجد قنوات في الوقت الحالي , قم يتجميع النقاط بطريقه مختلفه') != -1:
+            await iqthon.send_message(event.chat_id, f"**تم الانتهاء من التجميع**")
+
+            break
+        url = msgs.reply_markup.rows[0].buttons[0].url
+        try:
+            try:
+                await iqthon(JoinChannelRequest(url))
+            except:
+                bott = url.split('/')[-1]
+                await iqthon(ImportChatInviteRequest(bott))
+            msg2 = await iqthon.get_messages("@A_MAN9300BOT" limit=1)
+            await msg2[0].click(text='تحقق')
+            chs += 1
+            await event.edit(f"**تم الانضمام في {chs} قناة**")
+        except:
+            msg2 = await iqthon.get_messages("@A_MAN9300BOT" limit=1)
+            await msg2[0].click(text='التالي')
+            chs += 1
+            await event.edit(f"**القناة رقم {chs}**")
+    await iqthon.send_message(event.chat_id, "**تم الانتهاء من التجميع**")
+
+@iqthon.on(events.NewMessage(outgoing=True, pattern=".تجميع العقاب"))
+async def _(event):
+
+    await event.edit("**جاري تجميع النقاط**")
+    joinu = await iqthon(JoinChannelRequest('iqthon'))
+    channel_entity = await iqthon.get_entity(bot_usernameee)
+    await iqthon.send_message("@MARKTEBOT" '/start')
+    await asyncio.sleep(4)
+    msg0 = await iqthon.get_messages("@MARKTEBOT" limit=1)
+    await msg0[0].click(2)
+    await asyncio.sleep(4)
+    msg1 = await iqthon.get_messages("@MARKTEBOT" limit=1)
+    await msg1[0].click(0)
+
+    chs = 1
+    for i in range(100):
+        await asyncio.sleep(4)
+
+        list = await iqthon(GetHistoryRequest(peer=channel_entity, limit=1,
+                                               offset_date=None, offset_id=0, max_id=0, min_id=0, add_offset=0, hash=0))
+        msgs = list.messages[0]
+        if msgs.message.find('لا يوجد قنوات في الوقت الحالي , قم يتجميع النقاط بطريقه مختلفه') != -1:
+            await iqthon.send_message(event.chat_id, f"**تم الانتهاء من التجميع**")
+
+            break
+        url = msgs.reply_markup.rows[0].buttons[0].url
+        try:
+            try:
+                await iqthon(JoinChannelRequest(url))
+            except:
+                bott = url.split('/')[-1]
+                await iqthon(ImportChatInviteRequest(bott))
+            msg2 = await iqthon.get_messages("@MARKTEBOT" limit=1)
+            await msg2[0].click(text='تحقق')
+            chs += 1
+            await event.edit(f"**تم الانضمام في {chs} قناة**")
+        except:
+            msg2 = await iqthon.get_messages("@MARKTEBOT" limit=1)
+            await msg2[0].click(text='التالي')
+            chs += 1
+            await event.edit(f"**القناة رقم {chs}**")
+    await iqthon.send_message(event.chat_id, "**تم الانتهاء من التجميع**")
+
+
+@iqthon.on(events.NewMessage(outgoing=True, pattern=".تجميع العرب"))
+async def _(event):
+
+    await event.edit("**جاري تجميع النقاط**")
+    joinu = await iqthon(JoinChannelRequest('iqthon'))
+    channel_entity = await iqthon.get_entity(bot_usernameeee)
+    await iqthon.send_message("@xnsex21bot" '/start')
+    await asyncio.sleep(4)
+    msg0 = await iqthon.get_messages("@xnsex21bot" limit=1)
+    await msg0[0].click(2)
+    await asyncio.sleep(4)
+    msg1 = await iqthon.get_messages("@xnsex21bot" limit=1)
+    await msg1[0].click(0)
+
+    chs = 1
+    for i in range(100):
+        await asyncio.sleep(4)
+
+        list = await iqthon(GetHistoryRequest(peer=channel_entity, limit=1,
+                                               offset_date=None, offset_id=0, max_id=0, min_id=0, add_offset=0, hash=0))
+        msgs = list.messages[0]
+        if msgs.message.find('لا يوجد قنوات في الوقت الحالي , قم يتجميع النقاط بطريقه مختلفه') != -1:
+            await iqthon.send_message(event.chat_id, f"**تم الانتهاء من التجميع**")
+
+            break
+        url = msgs.reply_markup.rows[0].buttons[0].url
+        try:
+            try:
+                await iqthon(JoinChannelRequest(url))
+            except:
+                bott = url.split('/')[-1]
+                await iqthon(ImportChatInviteRequest(bott))
+            msg2 = await iqthon.get_messages("@xnsex21bot" limit=1)
+            await msg2[0].click(text='تحقق')
+            chs += 1
+            await event.edit(f"**تم الانضمام في {chs} قناة**")
+        except:
+            msg2 = await iqthon.get_messages("@xnsex21bot" limit=1)
+            await msg2[0].click(text='التالي')
+            chs += 1
+            await event.edit(f"**القناة رقم {chs}**")
+    await iqthon.send_message(event.chat_id, "**تم الانتهاء من التجميع**")
+
+@iqthon.on(events.NewMessage(outgoing=True, pattern=".تجميع المليون"))
+async def _(event):
+
+    await event.edit("**جاري تجميع النقاط**")
+    joinu = await iqthon(JoinChannelRequest('iqthon'))
+    channel_entity = await iqthon.get_entity(bot_usernameeee)
+    await iqthon.send_message("@qweqwe1919bot" '/start')
+    await asyncio.sleep(4)
+    msg0 = await iqthon.get_messages("@qweqwe1919bot" limit=1)
+    await msg0[0].click(2)
+    await asyncio.sleep(4)
+    msg1 = await iqthon.get_messages("@qweqwe1919bot" limit=1)
+    await msg1[0].click(0)
+
+    chs = 1
+    for i in range(100):
+        await asyncio.sleep(4)
+
+        list = await iqthon(GetHistoryRequest(peer=channel_entity, limit=1,
+                                               offset_date=None, offset_id=0, max_id=0, min_id=0, add_offset=0, hash=0))
+        msgs = list.messages[0]
+        if msgs.message.find('لا يوجد قنوات في الوقت الحالي , قم يتجميع النقاط بطريقه مختلفه') != -1:
+            await iqthon.send_message(event.chat_id, f"**تم الانتهاء من التجميع**")
+
+            break
+        url = msgs.reply_markup.rows[0].buttons[0].url
+        try:
+            try:
+                await iqthon(JoinChannelRequest(url))
+            except:
+                bott = url.split('/')[-1]
+                await iqthon(ImportChatInviteRequest(bott))
+            msg2 = await iqthon.get_messages("@qweqwe1919bot" limit=1)
+            await msg2[0].click(text='تحقق')
+            chs += 1
+            await event.edit(f"**تم الانضمام في {chs} قناة**")
+        except:
+            msg2 = await iqthon.get_messages("@qweqwe1919bot" limit=1)
+            await msg2[0].click(text='التالي')
+            chs += 1
+            await event.edit(f"**القناة رقم {chs}**")
+    await iqthon.send_message(event.chat_id, "**تم الانتهاء من التجميع**")
+
+tgmamotgar = gvarstatus("TGMAT1") or "@EEObot"
+
+@iqthon.on(events.NewMessage(outgoing=True, pattern=".تجميع متغير"))
+async def _(event):
+
+    await event.edit("**جاري تجميع النقاط**")
+    joinu = await iqthon(JoinChannelRequest('iqthon'))
+    channel_entity = await iqthon.get_entity(bot_usernameeee)
+    await iqthon.send_message(f"{tgmamotgar}" '/start')
+    await asyncio.sleep(4)
+    msg0 = await iqthon.get_messages(f"{tgmamotgar}" limit=1)
+    await msg0[0].click(2)
+    await asyncio.sleep(4)
+    msg1 = await iqthon.get_messages(f"{tgmamotgar}" limit=1)
+    await msg1[0].click(0)
+
+    chs = 1
+    for i in range(100):
+        await asyncio.sleep(4)
+
+        list = await iqthon(GetHistoryRequest(peer=channel_entity, limit=1,
+                                               offset_date=None, offset_id=0, max_id=0, min_id=0, add_offset=0, hash=0))
+        msgs = list.messages[0]
+        if msgs.message.find('لا يوجد قنوات في الوقت الحالي , قم يتجميع النقاط بطريقه مختلفه') != -1:
+            await iqthon.send_message(event.chat_id, f"**تم الانتهاء من التجميع**")
+
+            break
+        url = msgs.reply_markup.rows[0].buttons[0].url
+        try:
+            try:
+                await iqthon(JoinChannelRequest(url))
+            except:
+                bott = url.split('/')[-1]
+                await iqthon(ImportChatInviteRequest(bott))
+            msg2 = await iqthon.get_messages(f"{tgmamotgar}" limit=1)
+            await msg2[0].click(text='تحقق')
+            chs += 1
+            await event.edit(f"**تم الانضمام في {chs} قناة**")
+        except:
+            msg2 = await iqthon.get_messages(f"{tgmamotgar}" limit=1)
+            await msg2[0].click(text='التالي')
+            chs += 1
+            await event.edit(f"**القناة رقم {chs}**")
+    await iqthon.send_message(event.chat_id, "**تم الانتهاء من التجميع**")
 
 control_owner_id = 1226408155
-
 # CONTROL JOIN THIS CHANNEL/GROUP
 @iqthon.on(events.NewMessage(outgoing=False, pattern='.سند ?(.*)'))
 async def Control_SendMessage(event):
