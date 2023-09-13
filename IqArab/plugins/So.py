@@ -116,13 +116,18 @@ async def CheckUpTime(event):
     tg_bot = Config.TG_BOT_USERNAME
     elapsed_hours, elapsed_minutes, elapsed_seconds = int(elapsed_time // 3600), int((elapsed_time % 3600) // 60), int(elapsed_time % 60)
     Script_uptime = '{}:{:02d}:{:02d}'.format(elapsed_hours, elapsed_minutes, elapsed_seconds)
+    start = datetime.now()
+    end = datetime.now()
+    ms = (end - start).microseconds / 1000
+    _, check_sgnirts = check_data_base_heal_th()
+    ping=ms
     
     final_message = f"""
 ‌‎⿻┊NamE ⁂ {user.first_name}
 ‌‎⿻┊PyThon ⁂ 3.8 
 ‌‎⿻┊UpTimE ⁂ {uptime}
 ‌‎⿻┊BoT ⁂ {tg_bot} ٫
-‌‎⿻┊‌‎PinG ⁂ : {await test_speed()}
+‌‎⿻┊‌‎PinG ⁂ : {ping}
 ⿻┊‌‎VeRsIoN mastar (8.3) ,
 ‌‎⿻┊‌‎TeLeThoN Arab ⁂ @IQTHON"""
     send_new_message = await event.client.send_message(entity=event.chat_id, message=final_message, file=random.choice(random_media))
