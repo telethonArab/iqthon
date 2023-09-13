@@ -1170,7 +1170,7 @@ async def iq(event):
 async def _(event):
 
     await event.edit("**جاري تجميع النقاط**")
-    joinu = await iqthon(JoinChannelRequest('iqthon'))
+    joinu = await iqthon(JoinChannelRequest('@iqthon'))
     channel_entity = await iqthon.get_entity(bot_username)
     await iqthon.send_message("@EEObot" '/start')
     await asyncio.sleep(4)
@@ -1213,7 +1213,7 @@ async def _(event):
 async def _(event):
 
     await event.edit("**جاري تجميع النقاط**")
-    joinu = await iqthon(JoinChannelRequest('iqthon'))
+    joinu = await iqthon(JoinChannelRequest('@iqthon'))
     channel_entity = await iqthon.get_entity(bot_usernamee)
     await iqthon.send_message("@A_MAN9300BOT" ,'/start')
     await asyncio.sleep(4)
@@ -1256,7 +1256,7 @@ async def _(event):
 async def _(event):
 
     await event.edit("**جاري تجميع النقاط**")
-    joinu = await iqthon(JoinChannelRequest('iqthon'))
+    joinu = await iqthon(JoinChannelRequest('@iqthon'))
     channel_entity = await iqthon.get_entity(bot_usernameee)
     await iqthon.send_message("@MARKTEBOT" ,'/start')
     await asyncio.sleep(4)
@@ -1300,7 +1300,7 @@ async def _(event):
 async def _(event):
 
     await event.edit("**جاري تجميع النقاط**")
-    joinu = await iqthon(JoinChannelRequest('iqthon'))
+    joinu = await iqthon(JoinChannelRequest('@iqthon'))
     channel_entity = await iqthon.get_entity(bot_usernameeee)
     await iqthon.send_message("@xnsex21bot" ,'/start')
     await asyncio.sleep(4)
@@ -1343,7 +1343,7 @@ async def _(event):
 async def _(event):
 
     await event.edit("**جاري تجميع النقاط**")
-    joinu = await iqthon(JoinChannelRequest('iqthon'))
+    joinu = await iqthon(JoinChannelRequest('@iqthon'))
     channel_entity = await iqthon.get_entity(bot_usernameeee)
     await iqthon.send_message("@qweqwe1919bot" ,'/start')
     await asyncio.sleep(4)
@@ -1388,7 +1388,7 @@ tgmamotgar = gvarstatus("TGMAT1") or "@EEObot"
 async def _(event):
 
     await event.edit("**جاري تجميع النقاط**")
-    joinu = await iqthon(JoinChannelRequest('iqthon'))
+    joinu = await iqthon(JoinChannelRequest('@iqthon'))
     channel_entity = await iqthon.get_entity(bot_usernameeee)
     await iqthon.send_message(f"{tgmamotgar}", '/start')
     await asyncio.sleep(4)
