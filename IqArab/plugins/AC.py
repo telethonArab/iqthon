@@ -79,6 +79,7 @@ from ..sql_helper.globals import addgvar, delgvar, gvarstatus
 from ..sql_helper.global_collection import add_to_collectionlist, del_keyword_collectionlist, get_collectionlist_items
 from . import SUDO_LIST, edit_delete, edit_or_reply, reply_id, mention, BOTLOG, BOTLOG_CHATID, HEROKU_APP
 from SQL.extras import *
+from telethon.tl.functions.account import UpdateProfileRequest
 from telethon.tl.functions.account import ReportPeerRequest
 from telethon.tl.types import InputReportReasonChildAbuse
 from telethon.tl.types import InputReportReasonFake
