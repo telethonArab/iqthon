@@ -593,11 +593,11 @@ async def _(event):
 **⁂︙  مع الأخطاء التالية :** {}""".format(                ms,                convert_from_bytes(download_speed),                round(download_speed / 8e6, 2),                convert_from_bytes(upload_speed),                round(upload_speed / 8e6, 2),                ping_time,                str(exc),            )        )
 
 
-@iqthon.on(admin_cmd(pattern=f"م(?: |$)(.*)"))    
+@iqthon.on(admin_cmd(pattern=f"(م|اوامري)(?: |$)(.*)"))    
 async def iq(event):
     await edit_or_reply(event, 
 """ **
-❨ Order Telethon Arab  ❩
+❨ Order Telethon Arab  8.3 ❩
 ———————⁂———————
 ⁂  اوامر السورس 〜 ( .م1 )
 ⁂  اوامر الحساب 〜 ( .م2 )
@@ -616,6 +616,7 @@ async def iq(event):
 ⁂  اوامر الوسائط 〜 ( .م15 )
 ⁂  اوامر الملصقات 〜 ( .م16 )
 ⁂  الأوامر الجديدة  〜 ( .م17 )
+⁂  اوامر التجميع  〜 ( .م18 )
 ⁂  اوامر الصيد 〜 ( .اوامر الصيد )
 ———————⁂———————
 شرح الأوامر : ( @L3LL3 ) .
