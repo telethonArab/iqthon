@@ -2582,7 +2582,10 @@ async def send_message(event, message):
     global sarqaoid
     if sarqaoid:
         await send_message(event, message)
-        
+ritboid = False         
+bkshashoid = False
+sarqaoid = False
+iqthonitsoid = False
 async def knosendoid(event):
     await event.respond('راتب')
     await asyncio.sleep(660)
