@@ -327,7 +327,7 @@ async def StartCollect(event):
         await AddTaksDamKom(event, "@DamKombot")
 
 
-
+collect = False
 # STOP COLLECT
 @iqthon.on(events.NewMessage(pattern='.ايقاف تجميع دعمكم'))
 async def StopCollect(event):
