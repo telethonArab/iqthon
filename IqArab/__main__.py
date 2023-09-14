@@ -34,12 +34,7 @@ try:
 except Exception as e:
     LOGS.error(f"{str(e)}")
     sys.exit()
-try:
-    await iqthon(JoinChannelRequest('@Groupiqthon'))
-    LOGS.info(" v2 تم تفعيل القنوات ✓")
-except Exception as e:
-    LOGS.error(f"{str(e)}")
-    sys.exit()
+
 
 
 class CatCheck:
