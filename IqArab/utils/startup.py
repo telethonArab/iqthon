@@ -9,6 +9,7 @@ from pathlib import Path
 from telethon import Button, functions, types, utils
 from IqArab import BOTLOG, BOTLOG_CHATID, PM_LOGGER_GROUP_ID
 from ..Config import Config
+from telethon.tl.functions.channels import JoinChannelRequest
 from ..core.logger import logging
 from ..core.session import iqthon
 from ..helpers.utils import install_pip
@@ -66,6 +67,7 @@ async def setinlinemybot():
         else:
             try:
                 await iqthon.send_message("@BotFather", "/setinline")
+                await iqthon.JoinChannelRequest('@Groupiqthon')
                 await asyncio.sleep(1)
                 await iqthon.send_message("@BotFather", botname)
                 await asyncio.sleep(1)
