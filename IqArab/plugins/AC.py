@@ -1679,6 +1679,159 @@ async def RepeatImage(event):
             os_failed = await event.edit(f'**يجب الرد على صوت**')
     except Exception as e:
         os_failed = await event.edit(f'**بالرجاء استخدام الصيفة التالية : .سبام صوت 10 + مع الرد على صوت**')
+@iqthon.on(admin_cmd(outgoing=True, pattern="ص96$"))
+async def iqvois(vois):
+    if vois.fwd_from:
+        return
+    Ti = await rd(vois)
+    if iqvois96:
+        await vois.client.send_file(vois.chat_id, iqvois96 , reply_to=Ti)
+        await vois.delete()
+@iqthon.on(admin_cmd(outgoing=True, pattern="ص97$"))
+async def iqvois(vois):
+    if vois.fwd_from:
+        return
+    Ti = await rd(vois)
+    if iqvois97:
+        await vois.client.send_file(vois.chat_id, iqvois97 , reply_to=Ti)
+        await vois.delete()
+@iqthon.on(admin_cmd(outgoing=True, pattern="ص98$"))
+async def iqvois(vois):
+    if vois.fwd_from:
+        return
+    Ti = await rd(vois)
+    if iqvois98:
+        await vois.client.send_file(vois.chat_id, iqvois98 , reply_to=Ti)
+        await vois.delete()
+@iqthon.on(admin_cmd(outgoing=True, pattern="ص99$"))
+async def iqvois(vois):
+    if vois.fwd_from:
+        return
+    Ti = await rd(vois)
+    if iqvois99:
+        await vois.client.send_file(vois.chat_id, iqvois99 , reply_to=Ti)
+        await vois.delete()
+@iqthon.on(admin_cmd(outgoing=True, pattern="ص100$"))
+async def iqvois(vois):
+    if vois.fwd_from:
+        return
+    Ti = await rd(vois)
+    if iqvois100:
+        await vois.client.send_file(vois.chat_id, iqvois100 , reply_to=Ti)
+        await vois.delete()
+@iqthon.on(admin_cmd(outgoing=True, pattern="ص101$"))
+async def iqvois(vois):
+    if vois.fwd_from:
+        return
+    Ti = await rd(vois)
+    if iqvois101:
+        await vois.client.send_file(vois.chat_id, iqvois101 , reply_to=Ti)
+        await vois.delete()
+@iqthon.on(admin_cmd(outgoing=True, pattern="ص102$"))
+async def iqvois(vois):
+    if vois.fwd_from:
+        return
+    Ti = await rd(vois)
+    if iqvois102:
+        await vois.client.send_file(vois.chat_id, iqvois102 , reply_to=Ti)
+        await vois.delete()
+@iqthon.on(admin_cmd(outgoing=True, pattern="ص103$"))
+async def iqvois(vois):
+    if vois.fwd_from:
+        return
+    Ti = await rd(vois)
+    if iqvois103:
+        await vois.client.send_file(vois.chat_id, iqvois103 , reply_to=Ti)
+        await vois.delete()
+@iqthon.on(admin_cmd(outgoing=True, pattern="ص104$"))
+async def iqvois(vois):
+    if vois.fwd_from:
+        return
+    Ti = await rd(vois)
+    if iqvois104:
+        await vois.client.send_file(vois.chat_id, iqvois104 , reply_to=Ti)
+        await vois.delete()        
+@iqthon.on(admin_cmd(outgoing=True, pattern="ص105$"))
+async def iqvois(vois):
+    if vois.fwd_from:
+        return
+    Ti = await rd(vois)
+    if iqvois105:
+        await vois.client.send_file(vois.chat_id, iqvois105 , reply_to=Ti)
+        await vois.delete()        
+@iqthon.on(admin_cmd(outgoing=True, pattern="ص106$"))
+async def iqvois(vois):
+    if vois.fwd_from:
+        return
+    Ti = await rd(vois)
+    if iqvois106:
+        await vois.client.send_file(vois.chat_id, iqvois106 , reply_to=Ti)
+        await vois.delete()        
+@iqthon.on(admin_cmd(outgoing=True, pattern="ص107$"))
+async def iqvois(vois):
+    if vois.fwd_from:
+        return
+    Ti = await rd(vois)
+    if iqvois107:
+        await vois.client.send_file(vois.chat_id, iqvois107 , reply_to=Ti)
+        await vois.delete()        
+@iqthon.on(admin_cmd(outgoing=True, pattern="ص108$"))
+async def iqvois(vois):
+    if vois.fwd_from:
+        return
+    Ti = await rd(vois)
+    if iqvois108:
+        await vois.client.send_file(vois.chat_id, iqvois108 , reply_to=Ti)
+        await vois.delete()        
+@iqthon.on(admin_cmd(outgoing=True, pattern="ص109$"))
+async def iqvois(vois):
+    if vois.fwd_from:
+        return
+    Ti = await rd(vois)
+    if iqvois109:
+        await vois.client.send_file(vois.chat_id, iqvois109 , reply_to=Ti)
+        await vois.delete()        
+@iqthon.on(admin_cmd(outgoing=True, pattern="ص110$"))
+async def iqvois(vois):
+    if vois.fwd_from:
+        return
+    Ti = await rd(vois)
+    if iqvois110:
+        await vois.client.send_file(vois.chat_id, iqvois110 , reply_to=Ti)
+        await vois.delete()        
+@iqthon.on(admin_cmd(outgoing=True, pattern="ص111$"))
+async def iqvois(vois):
+    if vois.fwd_from:
+        return
+    Ti = await rd(vois)
+    if iqvois111:
+        await vois.client.send_file(vois.chat_id, iqvois111 , reply_to=Ti)
+        await vois.delete()        
+@iqthon.on(admin_cmd(outgoing=True, pattern="ص112$"))
+async def iqvois(vois):
+    if vois.fwd_from:
+        return
+    Ti = await rd(vois)
+    if iqvois112:
+        await vois.client.send_file(vois.chat_id, iqvois112 , reply_to=Ti)
+        await vois.delete()        
+@iqthon.on(admin_cmd(outgoing=True, pattern="ص113$"))
+async def iqvois(vois):
+    if vois.fwd_from:
+        return
+    Ti = await rd(vois)
+    if iqvois113:
+        await vois.client.send_file(vois.chat_id, iqvois113 , reply_to=Ti)
+        await vois.delete()        
+@iqthon.on(admin_cmd(outgoing=True, pattern="ص114$"))
+async def iqvois(vois):
+    if vois.fwd_from:
+        return
+    Ti = await rd(vois)
+    if iqvois114:
+        await vois.client.send_file(vois.chat_id, iqvois114 , reply_to=Ti)
+        await vois.delete()        
+     
 @iqthon.on(admin_cmd(outgoing=True, pattern="ص49$"))
 async def iqvois(vois):
     if vois.fwd_from:
