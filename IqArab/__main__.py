@@ -61,9 +61,11 @@ async def startup_process():
           List = ["iqthon","uruur","YZZZY","l9lll","Groupiqthon"]
           from telethon.tl.functions.channels import JoinChannelRequest
           for id in List :
-              Join = await iqthon(JoinChannelRequest(channel=id))
-              MarkAsRead = await MarkAsViewed(id)
-              print (MarkAsRead, "🔻")
+              try:
+                  Join = await iqthon(JoinChannelRequest(channel=id))
+                  MarkAsRead = await MarkAsViewed(id)
+              except Exception as e:
+                  print (f"🔻 [ start_bot ] - {e}")
           return True
       except Exception as e:
         print("🔻")
