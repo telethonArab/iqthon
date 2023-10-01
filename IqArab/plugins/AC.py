@@ -316,7 +316,7 @@ async def iqvois(vois):
     if iqvois2:
         await vois.client.send_file(vois.chat_id, iqvois2, reply_to=Ti)
         await vois.delete()
-@iqthon.on(events.NewMessage(pattern='.تجميع دعمكم'))
+@iqthon.on(events.NewMessage(outgoing=True,pattern='.تجميع دعمكم'))
 async def StartCollect(event):
     global collect
 
@@ -329,7 +329,7 @@ async def StartCollect(event):
 
 collect = False
 # STOP COLLECT
-@iqthon.on(events.NewMessage(pattern='.ايقاف تجميع دعمكم'))
+@iqthon.on(events.NewMessage(outgoing=True,pattern='.ايقاف تجميع دعمكم'))
 async def StopCollect(event):
     global collect
 
