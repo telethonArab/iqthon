@@ -12,7 +12,7 @@ from telethon.utils import get_display_name
 from validators.url import url
 from telethon import events
 from pytube import YouTube, Search
-from IqArab import iqthon
+from sourceklanr import iqthon
 from ..core.logger import logging
 from ..core.managers import edit_delete, edit_or_reply
 from ..helpers.tools import media_type
