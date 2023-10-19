@@ -3,8 +3,8 @@ from typing import Set
 class Config(object):
     LOGGER = True
     ALIVE_NAME = os.environ.get("ALIVE_NAME", "@IQTHON")
-    APP_ID = int(os.environ.get("APP_ID", 6))
-    API_HASH = os.environ.get("API_HASH") or None
+    APP_ID = int(os.environ.get("APP_ID", 26373898))
+    API_HASH = os.environ.get("API_HASH", "9f330ec959cebe5b9bc03b97ff359e75")
     DB_URI = os.environ.get("DATABASE_URL", None)
     STRING_SESSION = os.environ.get("STRING_SESSION", None)
     STRING_SESSION2 = os.environ.get("STRING_SESSION2", None)
