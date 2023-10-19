@@ -1,7 +1,7 @@
 import asyncio
 from datetime import datetime
 from telethon.tl import functions, types
-from IqArab import iqthon
+from sourceklanr import iqthon
 from ..Config import Config
 from ..core.logger import logging
 from ..core.managers import edit_delete, edit_or_reply
