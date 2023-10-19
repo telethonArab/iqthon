@@ -1,1 +1,1 @@
-web: python3 -m IqArab
+web: python3 -m sourceklanr
