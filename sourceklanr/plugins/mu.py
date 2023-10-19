@@ -1,4 +1,4 @@
-from IqArab.core.logger import logging
+from sourceklanr.core.logger import logging
 from telethon import TelegramClient, client, events
 from pytgcalls import idle
 from pytgcalls import PyTgCalls
@@ -6,7 +6,7 @@ from pytgcalls import StreamType
 from pytgcalls.types.input_stream import AudioVideoPiped, AudioPiped
 from pytgcalls.types.input_stream.quality import HighQualityAudio
 from pytgcalls.types.input_stream.quality import HighQualityVideo
-from IqArab import iqthon
+from sourceklanr import iqthon
 from ..Config import Config
 from telethon.sessions import StringSession
 import asyncio
