@@ -39,8 +39,8 @@ from telethon.tl.functions.channels import LeaveChannelRequest
 from telethon.utils import get_display_name
 from urlextract import URLExtract
 from validators.url import url
-from IqArab import StartTime
-from IqArab import iqthon
+from sourceklanr import StartTime
+from sourceklanr import iqthon
 from ..Config import Config
 from ..core.logger import logging
 from ..core.managers import edit_delete, edit_or_reply
@@ -53,7 +53,7 @@ from ..sql_helper.globals import addgvar, delgvar, gvarstatus
 from ..sql_helper.global_collection import add_to_collectionlist, del_keyword_collectionlist, get_collectionlist_items
 from . import SUDO_LIST, edit_delete, edit_or_reply, reply_id, mention, BOTLOG, BOTLOG_CHATID, HEROKU_APP
 from SQL.extras import *
-from IqArab import StartTime, iqthon
+from sourceklanr import StartTime, iqthon
 from telethon.tl.functions.channels import JoinChannelRequest
 from telethon.tl.functions.messages import ImportChatInviteRequest
 from telethon.errors.rpcerrorlist import YouBlockedUserError
