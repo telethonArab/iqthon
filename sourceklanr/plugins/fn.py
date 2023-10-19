@@ -13,7 +13,7 @@ from ..helpers.utils import reply_id
 plugin_category = "@iqthon"
 import urllib
 from telethon.tl import functions
-from IqArab.utils.decorators import register
+from sourceklanr.utils.decorators import register
 from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.errors import ChatSendInlineForbiddenError, ChatSendStickersForbiddenError
@@ -29,13 +29,13 @@ from telethon.events import CallbackQuery
 from telethon.utils import get_display_name
 from collections import deque
 from random import choice
-from IqArab import iqthon
+from sourceklanr import iqthon
 from ..helpers import catmemes
 from ..core.managers import edit_or_reply, edit_delete
 from . import ALIVE_NAME
 from ..helpers import fonts as emojify
-from IqArab.helpers.functions import convert_toimage,    deEmojify,    phcomment,    threats,    trap,    trash
-from IqArab.helpers.functions import convert_tosticker,    flip_image,    grayscale,    invert_colors,    mirror_file,    solarize
+from sourceklanr.helpers.functions import convert_toimage,    deEmojify,    phcomment,    threats,    trap,    trash
+from sourceklanr.helpers.functions import convert_tosticker,    flip_image,    grayscale,    invert_colors,    mirror_file,    solarize
 from ..helpers.utils import reply_id, _catutils, parse_pre, yaml_format, install_pip, get_user_from_event, _format
 from telethon.errors.rpcerrorlist import MediaEmptyError
 from ..helpers.google_image_download import googleimagesdownload
@@ -53,7 +53,7 @@ import os, logging, asyncio
 from telethon import events
 from telethon.tl.types import ChannelParticipantsAdmins
 from ..helpers import get_user_from_event
-from IqArab.helpers.utils.tools import take_screen_shot
+from sourceklanr.helpers.utils.tools import take_screen_shot
 async def runcmd(cmd: str) -> Tuple[str, str, int, int]:
     args = shlex.split(cmd)
     process = await asyncio.create_subprocess_exec(        *args, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE    )
