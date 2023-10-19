@@ -7,7 +7,7 @@ from telethon.tl.functions.account import CheckUsernameRequest
 from telethon.tl.functions.account import UpdateUsernameRequest
 from telethon.tl.functions.messages import SendMessageRequest
 from telethon.tl.types import MessageEntityBold
-from IqArab import iqthon
+from sourceklanr import iqthon
 
 # A special file for Arab Telethon fishing for you
 # needs
