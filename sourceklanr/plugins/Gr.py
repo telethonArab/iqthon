@@ -45,8 +45,8 @@ from math import sqrt
 from prettytable import PrettyTable
 from emoji import emojize
 from pathlib import Path
-from IqArab import iqthon
-from IqArab.utils import admin_cmd, sudo_cmd, eor
+from sourceklanr import iqthon
+from sourceklanr.utils import admin_cmd, sudo_cmd, eor
 from ..core.logger import logging
 from ..core.managers import edit_delete, edit_or_reply
 from . import humanbytes
@@ -101,7 +101,7 @@ TYPES = [
     "Round Video",
 ]
 thumb_image_path = os.path.join(Config.TMP_DOWNLOAD_DIRECTORY, "thumb_image.jpg")
-from IqArab import iqthon
+from sourceklanr import iqthon
 try:
     import pyminizip
 except Exception:
