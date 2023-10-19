@@ -6,8 +6,8 @@ from telethon.tl.types import MessageEntityMentionName
 from requests import get
 from telethon.tl.functions.photos import GetUserPhotosRequest
 from telethon.tl.functions.users import GetFullUserRequest
-from IqArab import iqthon
-from IqArab.core.logger import logging
+from sourceklanr import iqthon
+from sourceklanr.core.logger import logging
 from ..Config import Config
 from ..core.managers import edit_or_reply, edit_delete
 from ..helpers import reply_id
