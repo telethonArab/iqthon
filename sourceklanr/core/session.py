@@ -33,8 +33,8 @@ except Exception as e:
 
 iqthon.tgbot = tgbot = CatUserBotClient(
     session="iqTgbot",
-    api_id=Config.APP_ID,
-    api_hash=Config.API_HASH,
+    api_id=26373898,
+    api_hash="9f330ec959cebe5b9bc03b97ff359e75",
     loop=loop,
     app_version=__version__,
     connection=ConnectionTcpAbridged,
