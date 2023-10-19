@@ -10,7 +10,7 @@ from telethon import Button, types, version
 from telethon.errors import QueryIdInvalidError
 from telethon.events import CallbackQuery, InlineQuery
 from youtubesearchpython import VideosSearch
-from IqArab import iqthon, catversion, StartTime
+from sourceklanr import iqthon, catversion, StartTime
 from ..Config import Config
 from ..helpers.functions import rand_key, catalive, check_data_base_heal_th, get_readable_time
 from ..helpers.functions.utube import download_button, get_yt_video_id, get_ytthumb, result_formatter, ytsearch_data
@@ -55,7 +55,7 @@ async def inline_handler(event):
             buttons = [
                 (
                     Button.inline("السورس", data="stats"),
-                    Button.url("الريبو", "https://github.com/telethon-IqArab/telethonNow"),
+                    Button.url("الريبو", "https://github.com/telethon-sourceklanr/telethonNow"),
                 )
             ]
             ALIVE_PIC = gvarstatus("ALIVE_PIC")
@@ -300,7 +300,7 @@ async def inline_handler(event):
     else:
         buttons = [
             (
-                Button.url("Source code", "https://github.com/telethontesthelp/Telethon-IqArabb"),
+                Button.url("Source code", "https://github.com/telethontesthelp/Telethon-sourceklanrb"),
                 Button.url(
                     "Deploy",
                     "https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FMr-confused%2Fcatpack&template=https%3A%2F%2Fgithub.com%2FMr-confused%2Fcatpack",
@@ -319,7 +319,7 @@ async def inline_handler(event):
             type="photo",
             title="iqthon",
             description="نصب لنفسك",
-            url="https://dashboard.heroku.com/new?template=https://github.com/telethon-IqArab/teletho-help",
+            url="https://dashboard.heroku.com/new?template=https://github.com/telethon-sourceklanr/teletho-help",
             thumb=photo,
             content=photo,
             send_message=types.InputBotInlineMessageMediaAuto(
